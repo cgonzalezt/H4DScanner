@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Text, View, StyleSheet, Button } from 'react-native';
 import { BarCodeScanner } from 'expo-barcode-scanner';
+import Navigator from './routes/homeStack';
 
 export default function App() {
   const [hasPermission, setHasPermission] = useState(null);

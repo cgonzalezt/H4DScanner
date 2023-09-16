@@ -44,7 +44,6 @@ const Camera =({navigation, route}) => {
   // Return the View
   return (
     <View style={styles.container}>
-        <Text style={styles.maintext}>You have '$boxcounter' boxes left</Text>
       <View style={styles.barcodebox}>
         <BarCodeScanner
           onBarCodeScanned={scanned ? undefined : handleBarCodeScanned}

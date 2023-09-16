@@ -18,9 +18,9 @@ const Home = ({navigation}) => {
                 color = "#841584"
             />
             <Button
-                onPress={() => navigation.navigate('points1', {name= 'points1'})}
+                onPress={() => navigation.navigate('points1', {name: 'points1'})}
                 title = "Go to points"
-                color = "lightgrey"
+                color = "grey"
             />
 
         </View>

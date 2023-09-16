@@ -2,6 +2,9 @@ import React, { useState, useEffect } from 'react';
 import { Text, View, StyleSheet, Button } from 'react-native';
 import { BarCodeScanner } from 'expo-barcode-scanner';
 
+const boxcounter = 2;
+const greeting = `You have ${boxcounter} boxes left`;
+
 const Camera =({navigation, route}) => {
   const [hasPermission, setHasPermission] = useState(null);
   const [scanned, setScanned] = useState(false);
@@ -44,7 +47,9 @@ const Camera =({navigation, route}) => {
   // Return the View
   return (
     <View style={styles.container}>
+       <Text>{greeting}</Text>
       <View style={styles.barcodebox}>
+        {/* <Text>You have '$boxcounter' boxes left</Text> */}
         <BarCodeScanner
           onBarCodeScanned={scanned ? undefined : handleBarCodeScanned}
           style={{ height: 400, width: 400 }} />

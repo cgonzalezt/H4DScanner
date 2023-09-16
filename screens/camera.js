@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Text, View, StyleSheet, Button } from 'react-native';
 import { BarCodeScanner } from 'expo-barcode-scanner';
 
-export default function Camera() {
+const Camera =({navigation, route}) => {
   const [hasPermission, setHasPermission] = useState(null);
   const [scanned, setScanned] = useState(false);
   const [text, setText] = useState('Not yet scanned')
@@ -77,3 +77,4 @@ const styles = StyleSheet.create({
     backgroundColor: 'tomato'
   }
 });
+export default Camera

@@ -8,13 +8,14 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
 const Stack = createNativeStackNavigator(); 
 
+let boxcounter = 2;
 
 const App = () => {
     return (
         <NavigationContainer>
             <Stack.Navigator>
                 <Stack.Screen name = "Home" component={Home}/>
-                <Stack.Screen name = "Cam" component={Cam} />
+                <Stack.Screen name = "Cam" component={Cam} options = {{title: 'You have ${boxcounter} boxes left.'}}/>
                 <Stack.Screen name = "points1" component={points1} />
                 <Stack.Screen name = "points2" component={points2} />
             </Stack.Navigator>

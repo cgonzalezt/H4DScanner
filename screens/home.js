@@ -19,6 +19,7 @@ const Home = ({navigation}) => {
             onPress={() => navigation.navigate('Cam', {name: 'Cam'})
             }
             />
+            {/* luis perez */}
 
         </View>
     );

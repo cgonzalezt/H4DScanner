@@ -4,7 +4,7 @@ import { StyleSheet, Text, View, Image, SafeAreaView, Touchable, TouchableOpacit
 
 export default function ReturnMap() {
   return (
-    <SafeAreaView style = {styles.container}>
+    <View style = {styles.container}>
       {/* Guide message */}
       <Text> 
         Click on a drop-off location! 
@@ -26,15 +26,11 @@ export default function ReturnMap() {
       />
 
 
-        {/* // title="Click Me" onPress = {() => console.log("Button tapped")} */}
-       
-      {/* Pins */}
-      {/* <TouchableHighlight onPress={() => console.log("Image tapped!")}> */}
-      {/* </TouchableHighlight> */}
 
+        
 
     
-    </SafeAreaView>
+    </View>
   );
 }
 

@@ -23,6 +23,12 @@ const Home = ({navigation}) => {
                 color = "grey"
             />
 
+            <Button
+                onPress={() => navigation.navigate('returnmap', {name: 'returnmap'})}
+                title = "Dont Know where to return?"
+                color = "grey"
+            />
+
         </View>
     );
 }

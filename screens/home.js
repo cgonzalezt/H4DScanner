@@ -21,6 +21,7 @@ const Home = ({navigation}) => {
                 onPress={() => navigation.navigate('points1', {name= 'points1'})}
                 title = "Go to points"
                 color = "lightgrey"
+            />
 
         </View>
     );

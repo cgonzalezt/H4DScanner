@@ -17,6 +17,8 @@ const Home = ({navigation}) => {
                 title = "Go to Camera"
                 color = "#841584"
             />
+            <Button
+                onPress={() => navigation.navigate('')}
 
         </View>
     );

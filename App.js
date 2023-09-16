@@ -1,28 +1,28 @@
-import React, { useState } from 'react';
-import * as Font from 'expo-font';
-import { AppLoading } from 'expo';
-import Navigator from './routes/homeStack';
-
-
-const getFonts = () => Font.loadAsync({
-  'nunito-regular': require('./assets/fonts/Nunito-Regular.ttf'),
-  'nunito-bold': require('./assets/fonts/Nunito-Bold.ttf'),
-});
+import React from "react";
+import { StatusBar } from 'expo-status-bar';
+import { StyleSheet, Text, View, Image, SafeAreaView} from 'react-native';
 
 export default function App() {
-  const [fontsLoaded, setFontsLoaded] = useState(false);
+  return (
+    <SafeAreaView style = {styles.container}>
 
-  if (fontsLoaded) {
-    return (
-      <Navigator />
-    );
-  } else {
-    return (
-      <AppLoading
-      startAsync={getFonts}
-      onFinish={() => setFontsLoaded(true)}
+      <Image
+        source= {{
+          width : 400,
+          height : 550,
+          uri: 'https://softauthor.com/wp-content/uploads/2020/01/Screen-Shot-2020-01-27-at-3.56.27-PM.png'
+        }}
       />
-    )
-  }
-};
- 
+    
+    </SafeAreaView>
+  );
+}
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: '#fff',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+});

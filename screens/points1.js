@@ -21,6 +21,11 @@ export default function Points1() {
              Get 15% off your next McDonalds order: 100pts
             </Text>
         </TouchableOpacity>
+        <TouchableOpacity onPress={() => Linking.openURL('https://www.mcdonalds.com/us/en-us.html')} style={styles2.ads}>
+            <Text style={styles2.baseText}>
+             Get 15% off your next McDonalds order: 100pts
+            </Text>
+        </TouchableOpacity>
         </ScrollView>
     </SafeAreaView>
   );
@@ -35,7 +40,7 @@ const styles2 = StyleSheet.create({
     },
     baseText: {
         fontFamily: 'Arial',
-        fontSize: 15,
+        fontSize: 16,
     },
     titleText: {
         fontSize: 60,
@@ -56,8 +61,8 @@ const styles2 = StyleSheet.create({
     },
     ads: {
         marginTop: 20,
-        width: 350,
-        height: 40,
+        width: 375,
+        height: 50,
         justifyContent: 'center',
         alignItems: 'center',
         padding: 10,

@@ -6,7 +6,7 @@ import { get } from 'react-native/Libraries/TurboModule/TurboModuleRegistry';
 const titleText = "REEDEM YOUR POINTS";
 
 export default function Points1() {
-    if (getpointscounter() <= 75){
+    if (getpointscounter() < 75){
         return (
             <SafeAreaView style={styles2.container}>
                 <ScrollView style={styles2.scrollview}>
@@ -73,7 +73,7 @@ export default function Points1() {
                 </ScrollView>
             </SafeAreaView>
           );
-        } else if (getpointscounter() >=75 && getpointscounter() <= 150) {
+        } else if (getpointscounter() >=75 && getpointscounter() < 150) {
             return (
                 <SafeAreaView style={styles2.container}>
                     <ScrollView style={styles2.scrollview}>
@@ -140,7 +140,7 @@ export default function Points1() {
                     </ScrollView>
                 </SafeAreaView>
               );
-        } else if (getpointscounter() >= 150 && getpointscounter <= 250) {
+        } else if (getpointscounter() >= 150 && getpointscounter < 250) {
             return (
                 <SafeAreaView style={styles2.container}>
                     <ScrollView style={styles2.scrollview}>

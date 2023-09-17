@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {StyleSheet, View, Text, TouchableOpacity} from 'react-native';
+import {StyleSheet, View, Text, TouchableOpacity, Image} from 'react-native';
 import { globalStyles } from '../styles/global';
 import Cam from '../screens/camera';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
@@ -33,6 +33,8 @@ const Home = ({navigation}) => {
                 style={styles.mapbutton}>
                 <Text style = {styles.baseText}>Dropoff Locations</Text>
             </TouchableOpacity>
+
+            <Image source={require=('../assets/leaf.png')} style= {styles.backgroundimage} />
         </View>
 );
 };

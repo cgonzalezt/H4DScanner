@@ -9,12 +9,14 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
 const Stack = createNativeStackNavigator(); 
 
+
+
 const App = () => {
     return (
         <NavigationContainer>
             <Stack.Navigator>
-                <Stack.Screen name = "Home" component={Home} options = {{backgroundColor: 'green'}}/>
-                <Stack.Screen name = "Cam" component={Cam} options = {{title:'Camera Scanner'}}/>
+                <Stack.Screen name = "Home" component={Home} options = {{title: 'Home'}} />
+                <Stack.Screen name = "Cam" component={Cam} options = {{title:'Camera Scanner', color: 'darkgreen'}}/>
                 <Stack.Screen name = "points1" component={points1} />
                 <Stack.Screen name = "points2" component={points2} />
                 <Stack.Screen name = "returnmap" component={returnmap} options = {{title:'Return Location'}} />
@@ -22,5 +24,7 @@ const App = () => {
         </NavigationContainer>
     );
 }; 
+
+
 export default App;
  

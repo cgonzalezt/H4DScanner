@@ -4,40 +4,36 @@ import { StyleSheet, Text, View, Image, SafeAreaView, Touchable, TouchableOpacit
 
 export default function ReturnMap() {
   return (
-    <View style = {styles.container}>
-      {/* Guide message */}
-      <Text> 
-        Click on a drop-off location! 
-      </Text>
-      
-      {/* Map Image */}
-      <Image
-        source= {{
-          width : 400,
-          height : 550,
-          uri: 'https://softauthor.com/wp-content/uploads/2020/01/Screen-Shot-2020-01-27-at-3.56.27-PM.png'
-        }}
-      />
+    <view style={(styles.imagecontainer)}>
 
-    <TouchableOpacity onPress = {() => console.log("icon pressed!")}>
-        <Image //Icon
-          source= {{
-            width : 30,
-            height : 30,
-            uri: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Google_Maps_pin.svg/274px-Google_Maps_pin.svg.png'
-          }}
-        />
-    </TouchableOpacity>
-
-    </View>
+    <image source={require('./../assets/map.webp')} style={styles.backgroundimage} />
+    <image source={require('./../assets/pin.png')} style={styles.backgroundimage} />
+    </view>
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
+const styles = Stylesheet.create({
+
+imagecontainer: {
+
+position: 'relative',
+width:300,
+height:300,
+},
+backgroundimage:{
+
+  width:'100%',
+  height:'100%',
+  resizemode: 'cover'
+},
+
+overlayImage:{
+  position: 'absolute',
+  top: 0,
+  left:0,
+  width:'100%',
+  height:'100%',
+  resizemode: 'cover'
+},
+
 });

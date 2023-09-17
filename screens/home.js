@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { StyleSheet, View, Text, Button } from 'react-native';
 import { globalStyles } from '../styles/global';
 import Cam from '../screens/camera';
@@ -9,32 +9,34 @@ import { NavigationContainer } from '@react-navigation/native';
 const titleText = "WESAVER";
 
 const Home = ({navigation}) => {
-    return (
-        <View style={styles.container}>
-            <Text style={styles.baseText}>
-            <Text style= {globalStyles.titleText}>
-                {titleText}
-            </Text>
-            </Text>
-            <Button 
-                onPress={() => navigation.navigate('Cam', {name: 'Cam'})}
-                title = "Go to Camera"
-                color = "black"
-            />
-            <Button
-                onPress={() => navigation.navigate('points1', {name: 'points1'})}
-                title = "Go to points and discounts"
-                color = "black"
-            />
+    render() ; {
+        return (
+            <View style={styles.container}>
+                <Text style={styles.baseText}>
+                <Text style= {globalStyles.titleText}>
+                    {titleText}
+                </Text>
+                </Text>
+                <Button 
+                    onPress={() => navigation.navigate('Cam', {name: 'Cam'})}
+                    title = "Go to Camera"
+                    color = "black"
+                />
+                <Button
+                    onPress={() => navigation.navigate('points1', {name: 'points1'})}
+                    title = "Go to points and discounts"
+                    color = "black"
+                />
 
-            <Button
-                onPress={() => navigation.navigate('returnmap', {name: 'returnmap'})}
-                title = "Dont Know where to return?"
-                color = "black"
-            />
+                <Button
+                    onPress={() => navigation.navigate('returnmap', {name: 'returnmap'})}
+                    title = "Dont Know where to return?"
+                    color = "black"
+                />
 
-        </View>
+            </View>
     );
+};
 };
 
 
@@ -49,7 +51,7 @@ const styles = StyleSheet.create({
         fontFamily: 'Arial',
     },
     titleText: {
-        fontSize: 200,
+        fontSize: 50,
         fontWeight: 'bold',
     },
     buttonContainer: {

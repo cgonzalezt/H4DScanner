@@ -10,8 +10,6 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 const Stack = createNativeStackNavigator(); 
 
 
-module.exports = boxcounter = 2;
-module.exports = points = 0;
 
 const App = () => {
     return (
@@ -27,8 +25,6 @@ const App = () => {
     );
 }; 
 
-export {boxcounter};
-export {points};
 
 export default App;
  

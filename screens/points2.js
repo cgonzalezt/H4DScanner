@@ -1,11 +1,25 @@
 import React from 'react';
-import { StyleSheet, View, Text } from 'react-native';
+import { StyleSheet, View, Text, TouchableOpacity } from 'react-native';
 import { globalStyles } from '../styles/global';
 
-export default function Points2() {
+const titleText = "CONGRATULATIONS"
+const points = 50;
+export default function Points2({navigation}) {
   return (
-    <View style={globalStyles.container}>
-      <Text>p2</Text>
+    <View style={styles2.container}>
+
+        <Text style= {styles2.titleText}>
+            {titleText}
+        </Text>
+
+        <Text style= {styles2.header}>
+            {"You just gained " + points + " points!"}
+        </Text>
+        <TouchableOpacity
+                onPress={() => navigation.navigate('points1', {name: 'points1'})}
+                style={styles2.p1button}>
+                <Text style = {styles2.baseText}>CHECK YOUR REWARDS!</Text>
+        </TouchableOpacity>
     </View>
   );
 }
@@ -13,7 +27,7 @@ export default function Points2() {
 const styles2 = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: 'mediumaquamarine',
+        backgroundColor: 'lightgreen',
         alignItems: 'center',
         justifyContent: 'center',
     },
@@ -21,8 +35,15 @@ const styles2 = StyleSheet.create({
         fontFamily: 'Arial',
     },
     titleText: {
-        fontSize: 60,
+        fontSize: 35,
         fontWeight: 'bold',
+        color: 'darkgreen',
+        
+    },
+    header: {
+        fontSize: 20,
+        fontWeight: 'bold',
+        color: 'green',
     },
     ButtonContainer: {
         elevation: 8,
@@ -31,5 +52,15 @@ const styles2 = StyleSheet.create({
         paddingVertical: 10,
         paddingHorizontal: 12,
     },
+    p1button: {
+      marginTop: 20,
+      width: 300,
+      height: 50,
+      justifyContent: 'center',
+      alignItems: 'center',
+      padding: 10,
+      borderRadius: 100,
+      backgroundColor: 'green',
+  },
 
 })

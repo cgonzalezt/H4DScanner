@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {StyleSheet, View, Text, TouchableOpacity, Image} from 'react-native';
+import {StyleSheet, View, Text, TouchableOpacity, ImageBackground, SafeAreaView} from 'react-native';
 import { globalStyles } from '../styles/global';
 import Cam from '../screens/camera';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
@@ -8,9 +8,12 @@ import { NavigationContainer } from '@react-navigation/native';
 
 const titleText = "WESAVER";
 
+const image = {uri: 'https://i.pinimg.com/originals/ad/fa/06/adfa06a2e4c804ce1ba06826c76c949e.pnghttps://wallpapercave.com/wp/wp5349389.jpg'};
+
 const Home = ({navigation}) => {
     return (
         <View style={styles.container}>
+            <ImageBackground source={image} resizeMode="cover" style={styles.image}>
             <Text style={styles.baseText}>
             <Text style= {styles.titleText}>
                 {titleText}
@@ -33,8 +36,7 @@ const Home = ({navigation}) => {
                 style={styles.mapbutton}>
                 <Text style = {styles.baseText}>Dropoff Locations</Text>
             </TouchableOpacity>
-
-            <Image source={require=('../assets/leaf.png')} style= {styles.backgroundimage} />
+            </ImageBackground>
         </View>
 );
 };
@@ -86,6 +88,10 @@ const styles = StyleSheet.create({
         borderRadius: 100,
         backgroundColor: 'green',
     },
+    image: {
+        flex: 1,
+        justifyContent: 'center',
+    }
     },
 )
 

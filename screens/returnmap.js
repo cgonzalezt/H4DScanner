@@ -4,24 +4,21 @@ import { StyleSheet, Text, View, Image, SafeAreaView, Touchable, TouchableOpacit
 
 export default function ReturnMap() {
   return (
-    <view style={(styles.imagecontainer)}>
-
-    <image source={require('./../assets/map.webp')} style={styles.backgroundimage} />
-    <image source={require('./../assets/pin.png')} style={styles.backgroundimage} />
-    </view>
+    <View style={(styles.imagecontainer)}>
+    <Image source={require('./../assets/map.webp')} style={styles.backgroundImage} />
+    <Image source={require('./../assets/pin.png')} style={styles.overlayImage} />
+    </View>
   );
 }
 
-const styles = Stylesheet.create({
+const styles = StyleSheet.create({
 
 imagecontainer: {
-
 position: 'relative',
 width:300,
 height:300,
 },
-backgroundimage:{
-
+backgroundImage:{
   width:'100%',
   height:'100%',
   resizemode: 'cover'
@@ -29,8 +26,8 @@ backgroundimage:{
 
 overlayImage:{
   position: 'absolute',
-  top: 0,
-  left:0,
+  top: 12,
+  left:12,
   width:'100%',
   height:'100%',
   resizemode: 'cover'

@@ -16,9 +16,11 @@ export default function Points1() {
         <Text style= {styles2.header}>
             {"Total number of points:" + getpointscounter()}
         </Text>
-        <Text style={{color:'green'}} onPress={() => Linking.openURL('https://www.mcdonalds.com/us/en-us.html')}>
-            Get 15% off your next McDonalds order: 100pts
-        </Text>
+        <TouchableOpacity onPress={() => Linking.openURL('https://www.mcdonalds.com/us/en-us.html')} style={styles2.ads}>
+            <Text style={styles2.baseText}>
+             Get 15% off your next McDonalds order: 100pts
+            </Text>
+        </TouchableOpacity>
         </ScrollView>
     </SafeAreaView>
   );
@@ -51,5 +53,15 @@ const styles2 = StyleSheet.create({
         paddingVertical: 10,
         paddingHorizontal: 12,
     },
+    ads: {
+        marginTop: 20,
+        width: 250,
+        height: 25,
+        justifyContent: 'center',
+        alignItems: 'center',
+        padding: 10,
+        borderRadius: 100,
+        backgroundColor: 'green',
+    }
 
 })

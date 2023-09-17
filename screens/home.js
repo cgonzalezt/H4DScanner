@@ -57,12 +57,19 @@ const styles = StyleSheet.create({
     baseText: {
         fontFamily: 'Arial',
         color: 'white',
-        fontSize: 25,
+        fontSize: 33,
+        fontWeight: 'bold',
     },
     titleText: {
         fontSize: 60,
         fontWeight: 'bold',
         color: '#FF0017',
+        textShadowColor: 'black',
+        textShadowRadius: 3,
+        textShadowOffset: {
+            width: 2,
+            height: 2,
+        }
     },
     cambutton: {
         marginTop: 20,
@@ -72,7 +79,9 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         padding: 10,
         borderRadius: 100,
-        backgroundColor: 'green',
+        borderColor: 'black',
+        borderStyle: 'solid',
+        borderWidth: 6,
     },
     p1button: {
         marginTop: 20,
@@ -82,7 +91,9 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         padding: 10,
         borderRadius: 100,
-        backgroundColor: 'green',
+        borderColor: 'black',
+        borderStyle: 'solid',
+        borderWidth: 6,
     },
     mapbutton: {
         marginTop: 20,
@@ -92,7 +103,9 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         padding: 10,
         borderRadius: 100,
-        backgroundColor: 'green',
+        borderColor: 'black',
+        borderStyle: 'solid',
+        borderWidth: 6,
     },
     image: {
         flex: 1,

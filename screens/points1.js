@@ -77,6 +77,7 @@ const styles2 = StyleSheet.create({
         fontFamily: 'Arial',
         fontSize: 16,
         flexWrap: 'wrap',
+        fontWeight: 'bold',
     },
     titleText: {
         fontSize: 60,
@@ -97,15 +98,17 @@ const styles2 = StyleSheet.create({
     },
     ads: {
         marginTop: 20,
-        width: 375,
+        width: 360,
         height: 50,
         justifyContent: 'center',
         alignItems: 'center',
-        padding: 10,
+        paddingHorizontal: 10,
+        paddingVertical: 5,
         borderRadius: 100,
         borderColor: 'black',
-        outLineColor: 'black',
-        outLineWidth: 4,
+        borderStyle: 'solid',
+        borderWidth: 4,
+        
     }
 
 })

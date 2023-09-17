@@ -51,6 +51,16 @@ export default function Points1() {
              Get 30% off your next Starbucks order: 300pts
             </Text>
         </TouchableOpacity>
+        <TouchableOpacity onPress={() => Linking.openURL('https://www.dunkindonuts.com/en')} style={styles2.ads}>
+            <Text style={styles2.baseText}>
+             Get 20% off your next Dunkin Donuts order: 150pts
+            </Text>
+        </TouchableOpacity>
+        <TouchableOpacity onPress={() => Linking.openURL('https://www.panerabread.com/en-us/home.html')} style={styles2.ads}>
+            <Text style={styles2.baseText}>
+             Get 25% off your next Panera Bread order: 250pts
+            </Text>
+        </TouchableOpacity>
         </ScrollView>
     </SafeAreaView>
   );

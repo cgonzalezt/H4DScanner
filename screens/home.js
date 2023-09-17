@@ -11,6 +11,8 @@ const titleText = "WESAVER";
 const Home = ({navigation}) => {
     return (
         <View style={styles.container}>
+
+            <ImageBackground source={require=('./../assets/leaf.png')} style={styles.image}/>
             <Text style={styles.baseText}>
             <Text style= {styles.titleText}>
                 {titleText}
@@ -34,7 +36,6 @@ const Home = ({navigation}) => {
                 <Text style = {styles.baseText}>Dropoff Locations</Text>
             </TouchableOpacity>
 
-            <Image source={require=('./../assets/leaf.png')} />
         </View>
 );
 };

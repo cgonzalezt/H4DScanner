@@ -103,7 +103,9 @@ const styles2 = StyleSheet.create({
         alignItems: 'center',
         padding: 10,
         borderRadius: 100,
-        backgroundColor: 'green',
+        borderColor: 'black',
+        outLineColor: 'black',
+        outLineWidth: 4,
     }
 
 })

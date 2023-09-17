@@ -43,10 +43,6 @@ const Home = ({navigation}) => {
     );
 };
 
-const PreviewLayout = ({
-    selectedValue,
-    setSelectedValue,
-})
 
 const styles = StyleSheet.create({
     container: {

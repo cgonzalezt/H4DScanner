@@ -1,15 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { Text, View, StyleSheet, TouchableOpacity} from 'react-native';
 import { BarCodeScanner } from 'expo-barcode-scanner';
-
-
-const boxcounter = 3;
-const greeting = `You have ${boxcounter} boxes left`;
+import { incrementboxCounter,decreaseboxCounter,getboxcounter,} from '../assets/global_counter';
 
 const Camera =({navigation, route}) => {
   const [hasPermission, setHasPermission] = useState(null);
   const [scanned, setScanned] = useState(false);
-  const [text, setText] = useState('Not yet scanned')
 
   const askForCameraPermission = () => {
     (async () => {
@@ -25,9 +21,8 @@ const Camera =({navigation, route}) => {
 
   // What happens when we scan the bar code
   const handleBarCodeScanned = ({ type, data }) => {
+    incrementboxCounter();
     setScanned(true);
-    setText(data)
-    console.log('Type: ' + type + '\nData: ' + data)
   };
 
   // Check permissions and return the screens
@@ -48,14 +43,13 @@ const Camera =({navigation, route}) => {
   // Return the View
   return (
     <View style={styles.container}>
-       <Text>{greeting}</Text>
+       <Text>{'you have ' + getboxcounter() + ' boxes left'}</Text>
       <View style={styles.barcodebox}>
-        {/* <Text>You have '$boxcounter' boxes left</Text> */}
+        {/* <Text>You have '$getboxcounter()' boxes left</Text> */}
         <BarCodeScanner
           onBarCodeScanned={scanned ? undefined : handleBarCodeScanned}
           style={{ height: 400, width: 400 }} />
       </View>
-      <Text style={styles.maintext}>{text}</Text>
       {scanned &&<TouchableOpacity onPress={() => navigation.navigate('points2', {name: 'points2'})}
                 style={styles.p2button}>
                 <Text>Scanned! Continue</Text>

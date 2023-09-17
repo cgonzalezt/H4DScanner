@@ -49,7 +49,7 @@ const styles = StyleSheet.create({
         fontFamily: 'Arial',
     },
     titleText: {
-        fontSize: 70,
+        fontSize: 200,
         fontWeight: 'bold',
     },
     buttonContainer: {

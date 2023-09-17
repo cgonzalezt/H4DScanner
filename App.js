@@ -15,7 +15,7 @@ const App = () => {
     return (
         <NavigationContainer>
             <Stack.Navigator>
-                <Stack.Screen name = "Home" component={Home}/>
+                <Stack.Screen name = "Home" component={Home} options = {{backgroundColor: 'green'}}/>
                 <Stack.Screen name = "Cam" component={Cam} options = {{title:'Camera Scanner'}}/>
                 <Stack.Screen name = "points1" component={points1} />
                 <Stack.Screen name = "points2" component={points2} />

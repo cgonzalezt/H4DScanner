@@ -88,9 +88,7 @@ const styles = StyleSheet.create({
         backgroundColor: 'green',
     },
         image: {
-            height: 20,
-            margin: 12,
-            borderWidth: 2,
+            height: 50,
             padding: 10,
         }
     },

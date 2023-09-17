@@ -9,7 +9,10 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
 const Stack = createNativeStackNavigator(); 
 
-let boxcounter = 2;
+
+const boxcounter = 2;
+
+const pointscounter = 0;
 
 const App = () => {
     return (

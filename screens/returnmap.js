@@ -21,15 +21,16 @@ height:300,
 backgroundImage:{
   width:'100%',
   height:'100%',
-  resizemode: 'cover'
+  resizemode: 'cover',
+  position: 'absolute',
 },
 
 overlayImage:{
   position: 'absolute',
-  top: 12,
-  left:12,
-  width:'100%',
-  height:'100%',
+  top: 200,
+  left:10,
+  width:'10%',
+  height:'10%',
   resizemode: 'cover'
 },
 

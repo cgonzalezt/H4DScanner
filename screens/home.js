@@ -25,7 +25,7 @@ const Home = ({navigation}) => {
             <Button 
                 onPress={() => navigation.navigate('Cam', {name: 'Cam'})}
                 title = "Go to Camera"
-                color = "#841584"
+                color = "black"
             />
             <Button
                 onPress={() => navigation.navigate('points1', {name: 'points1'})}
@@ -50,6 +50,9 @@ const styles = StyleSheet.create({
         backgroundColor: 'limegreen',
         alignItems: 'center',
         justifyContent: 'center',
+    },
+    buttonContainer: {
+        margin: 20,
     },
     box: {
         width: 250,

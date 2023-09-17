@@ -12,7 +12,7 @@ export default function ReturnMap() {
   );
 }
 
-const styles = StyleSheet.create({
+const styles = Stylesheet.create({
 
 imagecontainer: {
 
@@ -24,16 +24,17 @@ backgroundimage:{
 
   width:'100%',
   height:'100%',
-  resizemode: 'cover'
+  resizeMode: 'cover',
+  position: 'absolute',
 },
 
 overlayImage:{
   position: 'absolute',
-  top: 0,
-  left:0,
-  width:'100%',
-  height:'100%',
-  resizemode: 'cover'
+  top: 200,
+  left:10,
+  width:'10%',
+  height:'10%',
+  resizeMode: 'contain'
 },
 
 });

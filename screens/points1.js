@@ -16,6 +16,8 @@ export default function Points1() {
         <Text style= {styles2.header}>
             {"Total number of points:  " + getpointscounter()}
         </Text>
+
+        
         <TouchableOpacity onPress={() => Linking.openURL('https://www.mcdonalds.com/us/en-us.html')} style={styles2.ads}>
             <Text style={styles2.baseText}>
              Get 15% off your next McDonalds order: 100pts
@@ -74,9 +76,10 @@ const styles2 = StyleSheet.create({
         justifyContent: 'center',
     },
     baseText: {
-        fontFamily: 'Arial',
-        fontSize: 16,
+        fontFamily: 'Comic sanz',
+        fontSize: 14.5,
         flexWrap: 'wrap',
+        color:'white',
     },
     titleText: {
         fontSize: 60,

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Text, View, StyleSheet, TouchableOpacity} from 'react-native';
+import { Text, View, StyleSheet, TouchableOpacity,Image} from 'react-native';
 import { BarCodeScanner } from 'expo-barcode-scanner';
 import { incrementboxCounter,decreaseboxCounter,getboxcounter, incrementpointscounter,} from '../assets/global_counter';
 
@@ -33,6 +33,7 @@ const Camera =({navigation, route}) => {
         <Text>Requesting for camera permission</Text>
       </View>)
   }
+
   if (hasPermission === false) {
     return (
       <View style={styles.container}>
@@ -44,7 +45,9 @@ const Camera =({navigation, route}) => {
   // Return the View
   return (
     <View style={styles.container}>
-       <Text>{'you have ' + getboxcounter() + ' boxes left'}</Text>
+      <Image source={require('./../assets/please_god.jpeg')} style={styles.backgroundimage} />
+      <View style={styles.contentContainer}>
+       <Text style={styles.boxCounterText}>{'Box(es): ' + getboxcounter() }</Text>
       <View style={styles.barcodebox}>
         {/* <Text>You have '$getboxcounter()' boxes left</Text> */}
         <BarCodeScanner
@@ -56,21 +59,49 @@ const Camera =({navigation, route}) => {
                 <Text>Scanned! Continue</Text>
             </TouchableOpacity>
     }
-      
+    </View>
     </View>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
+    fontWeight: 'bold',
+    borderColorb:'black',
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
   },
+  boxCounterText:{
+    marginTop: 20,
+    width: 100,
+    height: 30,
+    justifyContent: 'center',
+    alignItems: 'center',
+    padding: 10,
+    borderRadius: 20,
+    fontWeight: 'bold',
+    backgroundColor: '#945532',
+
+  },
+  contentContainer:{
+    flex:1,
+    alignItems:'center',
+    justifyContent:'center',
+    fontWeight: 'bold',
+    borderColorb:'black',
+  },
+  backgroundimage:{
+    position:'absolute',
+    top:0,
+    left:0,
+    width:'100%',
+    height:'100%',
+    resizeMode: 'cover',},
+    
+    
   maintext: {
-    fontSize: 16,
+    fontSize: 20,
     margin: 20,
+  
   },
   barcodebox: {
     alignItems: 'center',

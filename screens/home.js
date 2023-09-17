@@ -11,7 +11,9 @@ const titleText = "WESAVER";
 const Home = ({navigation}) => {
     return (
         <View style={styles.container}>
-            
+            <SafeAreaView>
+            <ImageBackground source={{uri: 'https://i.pinimg.com/originals/ad/fa/06/adfa06a2e4c804ce1ba06826c76c949e.pnghttps://wallpapercave.com/wp/wp5349389.jpg',}} style={styles.image}/>
+            </SafeAreaView>
             <Text style={styles.baseText}>
             <Text style= {styles.titleText}>
                 {titleText}

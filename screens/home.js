@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {StyleSheet, View, Text, Button } from 'react-native';
+import {StyleSheet, View, Text, TouchableOpacity} from 'react-native';
 import { globalStyles } from '../styles/global';
 import Cam from '../screens/camera';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
@@ -16,23 +16,23 @@ const Home = ({navigation}) => {
                 {titleText}
             </Text>
             </Text>
-            <Button 
+            <TouchableOpacity 
                 onPress={() => navigation.navigate('Cam', {name: 'Cam'})}
-                title = "Go to Camera"
-                color = "black"
-            />
-            <Button
+                style = {styles.cambutton}>
+                <Text>Scan Container</Text>
+            </TouchableOpacity>
+
+            <TouchableOpacity
                 onPress={() => navigation.navigate('points1', {name: 'points1'})}
-                title = "Go to points and discounts"
-                color = "black"
-            />
+                style={styles.p1button}>
+                <Text>Check/Redeem your points!</Text>
+            </TouchableOpacity>
 
-            <Button
+            <TouchableOpacity
                 onPress={() => navigation.navigate('returnmap', {name: 'returnmap'})}
-                title = "Dont Know where to return?"
-                color = "black"
-            />
-
+                style={styles.mapbutton}>
+                <Text>Dropoff locator</Text>
+            </TouchableOpacity>
         </View>
 );
 };
@@ -51,14 +51,37 @@ const styles = StyleSheet.create({
         fontSize: 60,
         fontWeight: 'bold',
     },
-    ButtonContainer: {
-        elevation: 8,
+    cambutton: {
+        marginTop: 20,
+        width: 200,
+        height: 40,
+        justifyContent: 'center',
+        alignItems: 'center',
+        padding: 10,
+        borderRadius: 100,
         backgroundColor: 'green',
-        borderRadius: 10,
-        paddingVertical: 10,
-        paddingHorizontal: 12,
     },
-
-})
+    p1button: {
+        marginTop: 20,
+        width: 200,
+        height: 40,
+        justifyContent: 'center',
+        alignItems: 'center',
+        padding: 10,
+        borderRadius: 100,
+        backgroundColor: 'green',
+    },
+    mapbutton: {
+        marginTop: 20,
+        width: 200,
+        height: 40,
+        justifyContent: 'center',
+        alignItems: 'center',
+        padding: 10,
+        borderRadius: 100,
+        backgroundColor: 'green',
+    },
+    },
+)
 
 export default Home;

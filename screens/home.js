@@ -12,7 +12,7 @@ const Home = ({navigation}) => {
     return (
         <View style={styles.container}>
 
-            <ImageBackground source={{uri: 'https://i.pinimg.com/originals/ad/fa/06/adfa06a2e4c804ce1ba06826c76c949e.png',}} style={styles.image}/>
+            
             <Text style={styles.baseText}>
             <Text style= {styles.titleText}>
                 {titleText}
@@ -35,7 +35,7 @@ const Home = ({navigation}) => {
                 style={styles.mapbutton}>
                 <Text style = {styles.baseText}>Dropoff Locations</Text>
             </TouchableOpacity>
-
+            <ImageBackground source={{uri: 'https://i.pinimg.com/originals/ad/fa/06/adfa06a2e4c804ce1ba06826c76c949e.png',}} style={styles.image}/>
         </View>
 );
 };
@@ -88,8 +88,9 @@ const styles = StyleSheet.create({
         backgroundColor: 'green',
     },
         image: {
-            height: 50,
+            height: 100,
             padding: 10,
+            alignItems: 'flex-start',
         }
     },
 )

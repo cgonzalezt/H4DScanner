@@ -9,9 +9,7 @@ const FlexDirectionBasics = () => {
     const [flexDirection, setflexDirection] = useState('column');
 
     return (
-        <PreviewLayout
-        selectedValue={flexDirection}
-        setSelectedValue={setflexDirection}>
+        <PreviewLayout>
             <View style={[styles.box, {backgroundColor: 'lawngreen'}]}/>
         </PreviewLayout>
 

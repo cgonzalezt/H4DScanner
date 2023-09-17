@@ -9,28 +9,14 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
 const Stack = createNativeStackNavigator(); 
 
+
+
 const App = () => {
     return (
         <NavigationContainer>
-            <Stack.Navigator
-            initialRouteName="HomeScreen"
-            activeColor="red"
-            inactiveColor="white"
-            activeBackgroundColor="green"
-            inactiveBackgroundColor="green"
-            style={{ backgroundColor: 'green' }}
-            tabBarOptions={{
-              style:{
-                backgroundColor: 'green'
-              }
-            }}>
-                <Stack.Screen name = "Home" component={Home} />
-                <Stack.Screen name = "Cam" component={Cam} options = {{title:'Camera Scanner',
-                  tabBarLabel: 'Home',
-                  tabBarIcon: ({ color }) => (
-                    <MaterialCommunityIcons name="home" color={color} size={26} />
-                  ),
-                }}/>
+            <Stack.Navigator>
+                <Stack.Screen name = "Home" component={Home} headerStyle: {backgroundColor: 'green'}, />
+                <Stack.Screen name = "Cam" component={Cam} options = {{title:'Camera Scanner'}}/>
                 <Stack.Screen name = "points1" component={points1} />
                 <Stack.Screen name = "points2" component={points2} />
                 <Stack.Screen name = "returnmap" component={returnmap} options = {{title:'Return Location'}} />
@@ -38,5 +24,7 @@ const App = () => {
         </NavigationContainer>
     );
 }; 
+
+
 export default App;
  

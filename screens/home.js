@@ -9,35 +9,34 @@ import { NavigationContainer } from '@react-navigation/native';
 const titleText = "WESAVER";
 
 const Home = ({navigation}) => {
-    render() ; {
-        return (
-            <View style={styles.container}>
-                <Text style={styles.baseText}>
-                <Text style= {globalStyles.titleText}>
-                    {titleText}
-                </Text>
-                </Text>
-                <Button 
-                    onPress={() => navigation.navigate('Cam', {name: 'Cam'})}
-                    title = "Go to Camera"
-                    color = "black"
-                />
-                <Button
-                    onPress={() => navigation.navigate('points1', {name: 'points1'})}
-                    title = "Go to points and discounts"
-                    color = "black"
-                />
+    return (
+        <View style={styles.container}>
+            <Text style={styles.baseText}>
+            <Text style= {globalStyles.titleText}>
+                {titleText}
+            </Text>
+            </Text>
+            <Button 
+                onPress={() => navigation.navigate('Cam', {name: 'Cam'})}
+                title = "Go to Camera"
+                color = "black"
+            />
+            <Button
+                onPress={() => navigation.navigate('points1', {name: 'points1'})}
+                title = "Go to points and discounts"
+                color = "black"
+            />
 
-                <Button
-                    onPress={() => navigation.navigate('returnmap', {name: 'returnmap'})}
-                    title = "Dont Know where to return?"
-                    color = "black"
-                />
+            <Button
+                onPress={() => navigation.navigate('returnmap', {name: 'returnmap'})}
+                title = "Dont Know where to return?"
+                color = "black"
+            />
 
-            </View>
-    );
+        </View>
+);
 };
-};
+
 
 
 const styles = StyleSheet.create({

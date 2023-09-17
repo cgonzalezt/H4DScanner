@@ -6,7 +6,7 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { NavigationContainer } from '@react-navigation/native';
 
 
-const titleText = useState("WESAVER");
+const titleText = "WESAVER";
 
 const Home = ({navigation}) => {
     return (

@@ -46,7 +46,6 @@ const Home = ({navigation}) => {
 };
 
 const PreviewLayout = ({
-    children,
     selectedValue,
     setSelectedValue,
 })

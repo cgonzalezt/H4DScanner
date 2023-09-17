@@ -14,7 +14,7 @@ const Home = ({navigation}) => {
         <View style={styles.container}>
             <Image source={require('./../assets/maybee.jpeg')} style={styles.backgroundimage} />
             <Text style={styles.baseText}>
-                <Image source={require('./../assets/pengu.png')} style={styles.image}/>
+                <Image source={require('./../assets/pengu.png')} style={styles.logo}/>
             <Text style= {styles.titleText}>
                 {titleText}
             </Text>
@@ -40,7 +40,10 @@ const Home = ({navigation}) => {
 );
 };
 
-const styles = StyleSheet.create({
+const styles = StyleSheet.create(
+    
+    {
+
     container: {
         flex: 1,
         backgroundColor: 'black',
@@ -114,6 +117,11 @@ const styles = StyleSheet.create({
     image: {
         flex: 1,
         justifyContent: 'center',
+    },
+    logo:{
+        width:'.05',
+        height:'5',
+        resizeMode: 'contain'
     }
     },
 )

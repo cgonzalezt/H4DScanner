@@ -23,7 +23,6 @@ const App = () => {
             </Stack.Navigator>
         </NavigationContainer>
     );
-    // for you luis
 }; 
 
 export default App;

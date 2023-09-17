@@ -1,5 +1,5 @@
-import React, { Linking } from 'react';
-import { StyleSheet, View, Text , SafeAreaView, ScrollView, StatusBar, TouchableOpacity} from 'react-native';
+import React from 'react';
+import { StyleSheet, View, Text , SafeAreaView, ScrollView, StatusBar, TouchableOpacity, Linking} from 'react-native';
 import { globalStyles } from '../styles/global';
 import { incrementCounter,decreaseCounter,getcounter,} from '../assets/global_counter';
 const titleText = "REEDEM YOUR POINTS";

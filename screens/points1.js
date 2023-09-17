@@ -14,7 +14,7 @@ export default function Points1() {
         </Text>
 
         <Text style= {styles2.header}>
-            {"Total number of points:" + getpointscounter()}
+            {"Total number of points:  " + getpointscounter()}
         </Text>
         <TouchableOpacity onPress={() => Linking.openURL('https://www.mcdonalds.com/us/en-us.html')} style={styles2.ads}>
             <Text style={styles2.baseText}>

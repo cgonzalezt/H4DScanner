@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {StyleSheet, View, Text, TouchableOpacity, ImageBackground} from 'react-native';
+import {StyleSheet, View, Text, TouchableOpacity, ImageBackground, SafeAreaView} from 'react-native';
 import { globalStyles } from '../styles/global';
 import Cam from '../screens/camera';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
@@ -11,8 +11,9 @@ const titleText = "WESAVER";
 const Home = ({navigation}) => {
     return (
         <View style={styles.container}>
-
+            <SafeAreaView>
             <ImageBackground source={{uri: 'https://i.pinimg.com/originals/ad/fa/06/adfa06a2e4c804ce1ba06826c76c949e.png',}} style={styles.image}/>
+            </SafeAreaView>
             <Text style={styles.baseText}>
             <Text style= {styles.titleText}>
                 {titleText}

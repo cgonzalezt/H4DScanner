@@ -55,9 +55,11 @@ const Camera =({navigation, route}) => {
           style={{ height: 400, width: 400 }} />
       </View>
       <Text style={styles.maintext}>{text}</Text>
-      {scanned && <Button title={'Scan again?'} onPress={() => setScanned(false)} color='tomato' />}
-      {/* if scanned == true{
-        () => navigation.navigate('points2', {name: 'points2'}) */}
+      {scanned && <TouchableOpacity onPress={() => navigation.navigate('points2', {name: 'points2'})}
+                style={styles.p2button}>
+                <Text>Scanned! Continue</Text>
+            </TouchableOpacity>
+    }
       
     </View>
   );
@@ -82,6 +84,16 @@ const styles = StyleSheet.create({
     overflow: 'hidden',
     borderRadius: 30,
     backgroundColor: 'tomato'
+  },
+  points2button: {
+    marginTop: 20,
+        width: 200,
+        height: 40,
+        justifyContent: 'center',
+        alignItems: 'center',
+        padding: 10,
+        borderRadius: 100,
+        backgroundColor: 'green',
   }
 });
 export default Camera

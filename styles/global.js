@@ -1,5 +1,7 @@
 import { StyleSheet } from 'react-native';
 
+const boxcounter = 2;
+
 export const globalStyles = StyleSheet.create({
   titleText: {
     fontSize: 18,

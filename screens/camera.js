@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Text, View, StyleSheet, TouchableOpacity,Image} from 'react-native';
 import { BarCodeScanner } from 'expo-barcode-scanner';
-import { incrementboxCounter,decreaseboxCounter,getboxcounter, incrementpointscounter,} from '../assets/global_counter';
+import { incrementboxCounter,decreaseboxCounter,getboxcounter,incrementpointscounter, getSaveCounter, incrementSaveCounter} from '../assets/global_counter';
 
 const Camera =({navigation, route}) => {
   const [hasPermission, setHasPermission] = useState(null);
@@ -23,6 +23,7 @@ const Camera =({navigation, route}) => {
   const handleBarCodeScanned = ({ type, data }) => {
     incrementboxCounter();
     incrementpointscounter();
+    incrementSaveCounter();
     setScanned(true);
   };
 
@@ -47,19 +48,20 @@ const Camera =({navigation, route}) => {
     <View style={styles.container}>
       <Image source={require('./../assets/camback.jpg')} style={styles.backgroundimage} />
       <View style={styles.contentContainer}>
-       <Text style={styles.boxCounterText}>{'Box(es): ' + getboxcounter() }</Text>
-      <View style={styles.barcodebox}>
-        {/* <Text>You have '$getboxcounter()' boxes left</Text> */}
-        <BarCodeScanner
-          onBarCodeScanned={scanned ? undefined : handleBarCodeScanned}
-          style={{ height: 400, width: 400 }} />
+          <Text style={styles.saveCounterText}>{'Marine life saved : ' + getSaveCounter() }</Text>
+          <Text style={styles.boxCounterText}>{'Box(es) : ' + getboxcounter() }</Text>
+          <View style={styles.barcodebox}>
+              {/* <Text>You have '$getboxcounter()' boxes left</Text> */}
+              <BarCodeScanner
+                onBarCodeScanned={scanned ? undefined : handleBarCodeScanned}
+                style={{ height: 400, width: 400 }} />
+          </View>
+          {scanned &&<TouchableOpacity onPress={() => navigation.navigate('points2', {name: 'points2'})}
+                    style={styles.p2button}>
+                    <Text>Scanned! Continue</Text>
+                </TouchableOpacity>
+        }
       </View>
-      {scanned &&<TouchableOpacity onPress={() => navigation.navigate('points2', {name: 'points2'})}
-                style={styles.p2button}>
-                <Text>Scanned! Continue</Text>
-            </TouchableOpacity>
-    }
-    </View>
     </View>
   );
 }
@@ -70,11 +72,11 @@ const styles = StyleSheet.create({
     borderColorb:'black',
     flex: 1,
   },
-  boxCounterText:{
+  saveCounterText:{
     fontSize:20,
     marginTop: 20,
-    width: 120,
-    height: 35,
+    width: 250,
+    height: 40,
     justifyContent: 'center',
     alignItems: 'center',
     padding: 10,
@@ -85,7 +87,26 @@ const styles = StyleSheet.create({
         textShadowOffset: {
             width: 2,
             height: 2,
-        }
+        },
+    bottom : 80,
+  },
+  boxCounterText:{
+    fontSize:20,
+    marginTop: 20,
+    width: 120,
+    height: 40,
+    justifyContent: 'center',
+    alignItems: 'center',
+    padding: 10,
+    borderRadius: 20,
+    fontWeight: 'bold',
+    backgroundColor: '#945532',
+    textShadowRadius: 3,
+        textShadowOffset: {
+            width: 2,
+            height: 2,
+        },
+    bottom : 20
   },
   contentContainer:{
     flex:1,
@@ -118,6 +139,7 @@ const styles = StyleSheet.create({
     borderRadius: 30,
     backgroundColor: 'tomato'
   },
+
   p2button: {
     marginTop: 20,
         width: 200,

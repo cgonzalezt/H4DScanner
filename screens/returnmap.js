@@ -12,7 +12,7 @@ export default function ReturnMap() {
   );
 }
 
-const styles = Stylesheet.create({
+const styles = StyleSheet.create({
 
 imagecontainer: {
 

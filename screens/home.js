@@ -12,7 +12,7 @@ const Home = ({navigation}) => {
     return (
         <View style={styles.container}>
             <Text style={styles.baseText}>
-            <Text style= {globalStyles.titleText}>
+            <Text style= {styles.titleText}>
                 {titleText}
             </Text>
             </Text>
@@ -48,7 +48,7 @@ const styles = StyleSheet.create({
         fontFamily: 'Arial',
     },
     titleText: {
-        fontSize: 80,
+        fontSize: 60,
         fontWeight: 'bold',
     },
     ButtonContainer: {

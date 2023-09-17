@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import { Text, View, StyleSheet, Button } from 'react-native';
+import { Text, View, StyleSheet, TouchableOpacity} from 'react-native';
 import { BarCodeScanner } from 'expo-barcode-scanner';
-
-const boxcounter = 2;
+import {boxcounter} from './App.js';
 const greeting = `You have ${boxcounter} boxes left`;
 
 const Camera =({navigation, route}) => {
@@ -55,9 +54,11 @@ const Camera =({navigation, route}) => {
           style={{ height: 400, width: 400 }} />
       </View>
       <Text style={styles.maintext}>{text}</Text>
-      {scanned && <Button title={'Scan again?'} onPress={() => setScanned(false)} color='tomato' />}
-      {/* if scanned == true{
-        () => navigation.navigate('points2', {name: 'points2'}) */}
+      {scanned &&<TouchableOpacity onPress={() => navigation.navigate('points2', {name: 'points2'})}
+                style={styles.p2button}>
+                <Text>Scanned! Continue</Text>
+            </TouchableOpacity>
+    }
       
     </View>
   );
@@ -82,6 +83,16 @@ const styles = StyleSheet.create({
     overflow: 'hidden',
     borderRadius: 30,
     backgroundColor: 'tomato'
+  },
+  p2button: {
+    marginTop: 20,
+        width: 200,
+        height: 40,
+        justifyContent: 'center',
+        alignItems: 'center',
+        padding: 10,
+        borderRadius: 100,
+        backgroundColor: 'green',
   }
 });
 export default Camera

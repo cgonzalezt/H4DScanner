@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {StyleSheet, View, Text, Button } from 'react-native';
+import {StyleSheet, View, Text, TouchableOpacity} from 'react-native';
 import { globalStyles } from '../styles/global';
 import Cam from '../screens/camera';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
@@ -12,27 +12,27 @@ const Home = ({navigation}) => {
     return (
         <View style={styles.container}>
             <Text style={styles.baseText}>
-            <Text style= {globalStyles.titleText}>
+            <Text style= {styles.titleText}>
                 {titleText}
             </Text>
             </Text>
-            <Button 
+            <TouchableOpacity 
                 onPress={() => navigation.navigate('Cam', {name: 'Cam'})}
-                title = "Go to Camera"
-                color = "black"
-            />
-            <Button
+                style = {styles.cambutton}>
+                <Text style = {styles.baseText}>Scan Container</Text>
+            </TouchableOpacity>
+
+            <TouchableOpacity
                 onPress={() => navigation.navigate('points1', {name: 'points1'})}
-                title = "Go to points and discounts"
-                color = "black"
-            />
+                style={styles.p1button}>
+                <Text style = {styles.baseText}>Your Points</Text>
+            </TouchableOpacity>
 
-            <Button
+            <TouchableOpacity
                 onPress={() => navigation.navigate('returnmap', {name: 'returnmap'})}
-                title = "Dont Know where to return?"
-                color = "black"
-            />
-
+                style={styles.mapbutton}>
+                <Text style = {styles.baseText}>Dropoff Locations</Text>
+            </TouchableOpacity>
         </View>
 );
 };
@@ -40,21 +40,51 @@ const Home = ({navigation}) => {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: 'limegreen',
+        backgroundColor: 'darkgreen',
         alignItems: 'center',
         justifyContent: 'center',
     },
     baseText: {
         fontFamily: 'Arial',
+        color: 'white',
+        fontSize: 25,
     },
     titleText: {
-        fontSize: 50,
+        fontSize: 60,
         fontWeight: 'bold',
+        color: 'white',
     },
-    buttonContainer: {
-        margin: 20,
+    cambutton: {
+        marginTop: 20,
+        width: 300,
+        height: 80,
+        justifyContent: 'center',
+        alignItems: 'center',
+        padding: 10,
+        borderRadius: 100,
+        backgroundColor: 'green',
     },
-
-})
+    p1button: {
+        marginTop: 20,
+        width: 300,
+        height: 80,
+        justifyContent: 'center',
+        alignItems: 'center',
+        padding: 10,
+        borderRadius: 100,
+        backgroundColor: 'green',
+    },
+    mapbutton: {
+        marginTop: 20,
+        width: 300,
+        height: 80,
+        justifyContent: 'center',
+        alignItems: 'center',
+        padding: 10,
+        borderRadius: 100,
+        backgroundColor: 'green',
+    },
+    },
+)
 
 export default Home;

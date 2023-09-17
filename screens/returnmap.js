@@ -4,37 +4,76 @@ import { StyleSheet, Text, View, Image, SafeAreaView, Touchable, TouchableOpacit
 
 export default function ReturnMap() {
   return (
-    <view style={(styles.imagecontainer)}>
+    <View style={(styles.imagecontainer)}>
+  
+    <Image source={require('./../assets/real_map_dos.jpg')} style={styles.backgroundimage} />
 
-    <image source={require('./../assets/map.webp')} style={styles.backgroundimage} />
-    <image source={require('./../assets/pin.png')} style={styles.backgroundimage} />
-    </view>
+    <TouchableOpacity onPress={() => { console.log('Pin 1 pressed'); }}> 
+    <Image source={require('./../assets/pin.png')} style={styles.overlayImage} />
+    </TouchableOpacity>
+
+    <TouchableOpacity onPress={() => { console.log('Pin 2 pressed'); }}> 
+    <Image source={require('./../assets/pin.png')} style={styles.overlayImage2} />
+    </TouchableOpacity>
+
+    <TouchableOpacity onPress={() => { console.log('Pin 3 pressed'); }}> 
+    <Image source={require('./../assets/pin.png')} style={styles.overlayImage3} />
+    </TouchableOpacity>
+
+    <TouchableOpacity onPress={() => { console.log('Pin 4 pressed'); }}>
+    <Image source={require('./../assets/pin.png')} style={styles.overlayImage4} />
+    </TouchableOpacity>
+
+    </View>
   );
 }
 
-const styles = Stylesheet.create({
+const styles = StyleSheet.create({
 
-imagecontainer: {
+  imagecontainer: {
+    width: '100%',
+    height: '100%',
+    resizeMode: 'relative',
+  },
 
-position: 'relative',
-width:300,
-height:300,
-},
-backgroundimage:{
+  backgroundimage:{
+    width:'100%',
+    height:'100%',
+    resizeMode: 'cover',
+    position: 'absolute',
+  },
 
-  width:'100%',
-  height:'100%',
-  resizeMode: 'cover',
-  position: 'absolute',
-},
-
-overlayImage:{
-  position: 'absolute',
-  top: 200,
-  left:10,
-  width:'10%',
-  height:'10%',
-  resizeMode: 'contain'
-},
+  overlayImage:{
+    position: 'relative',
+    top: 120,
+    left:120,
+    width:'25%',
+    height:'25%',
+    resizeMode: 'contain'
+  },
+  overlayImage2:{
+    position: 'relative',
+    top: 300,
+    left:70,
+    width:'25%',
+    height:'25%',
+    resizeMode: 'contain'
+  },
+  overlayImage3:{
+    position: 'relative',
+    top: 200,
+    left:220,
+    width:'25%',
+    height:'25%',
+    resizeMode: 'contain'
+  },
+  overlayImage4:{
+    position: 'relative',
+    top: 3,
+    left:90,
+    width:'25%',
+    height:'25%',
+    resizeMode: 'contain'
+  },
 
 });

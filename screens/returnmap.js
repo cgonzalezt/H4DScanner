@@ -8,19 +8,27 @@ export default function ReturnMap() {
   
     <Image source={require('./../assets/real_map_dos.jpg')} style={styles.backgroundimage} />
 
-    <TouchableOpacity onPress={() => { console.log('Pin 1 pressed'); }}> 
+    <TouchableOpacity 
+    style={[styles.overlaytouch,{top:120,left:120}]}
+    onPress={() => { console.log('Pin 1 pressed'); }}>
     <Image source={require('./../assets/pin.png')} style={styles.overlayImage} />
     </TouchableOpacity>
 
-    <TouchableOpacity onPress={() => { console.log('Pin 2 pressed'); }}> 
+    <TouchableOpacity 
+    style={[styles.overlaytouch,{top:120,left:120}]}
+    onPress={() => { console.log('Pin 2 pressed'); }}> 
     <Image source={require('./../assets/pin.png')} style={styles.overlayImage2} />
     </TouchableOpacity>
 
-    <TouchableOpacity onPress={() => { console.log('Pin 3 pressed'); }}> 
+    <TouchableOpacity 
+    style={[styles.overlaytouch,{top:120,left:120}]}
+    onPress={() => { console.log('Pin 3 pressed'); }}> 
     <Image source={require('./../assets/pin.png')} style={styles.overlayImage3} />
     </TouchableOpacity>
 
-    <TouchableOpacity onPress={() => { console.log('Pin 4 pressed'); }}>
+    <TouchableOpacity 
+    style={[styles.overlaytouch,{top:120,left:120}]}
+    onPress={() => { console.log('Pin 4 pressed'); }}>
     <Image source={require('./../assets/pin.png')} style={styles.overlayImage4} />
     </TouchableOpacity>
 
@@ -31,9 +39,7 @@ export default function ReturnMap() {
 const styles = StyleSheet.create({
 
   imagecontainer: {
-    width: '100%',
-    height: '100%',
-    resizeMode: 'relative',
+    flex: 1,
   },
 
   backgroundimage:{
@@ -42,33 +48,37 @@ const styles = StyleSheet.create({
     resizeMode: 'cover',
     position: 'absolute',
   },
+overlaytouch:{
+  position:'absolute',
+  width:'25%',
+  height:'25%',
+  alignItems:'center',
+  justifyContent:'center',
+
+},
 
   overlayImage:{
-    position: 'relative',
-    top: 120,
+    top: 320,
     left:120,
     width:'25%',
     height:'25%',
     resizeMode: 'contain'
   },
   overlayImage2:{
-    position: 'relative',
-    top: 300,
-    left:70,
+    top: 140,
+    left:2,
     width:'25%',
     height:'25%',
     resizeMode: 'contain'
   },
   overlayImage3:{
-    position: 'relative',
-    top: 200,
-    left:220,
+    top: 280,
+    left:.001,
     width:'25%',
     height:'25%',
     resizeMode: 'contain'
   },
   overlayImage4:{
-    position: 'relative',
     top: 3,
     left:90,
     width:'25%',

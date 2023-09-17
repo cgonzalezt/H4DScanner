@@ -290,7 +290,7 @@ const styles2 = StyleSheet.create({
         justifyContent: 'center',
     },
     baseText: {
-        fontFamily: 'Comic sanz',
+        fontFamily: 'Comic sans',
         fontSize: 14.5,
         flexWrap: 'wrap',
         color:'white',

@@ -8,12 +8,12 @@ import { NavigationContainer } from '@react-navigation/native';
 
 const titleText = "WESAVER";
 
+const image = {uri: 'https://i.pinimg.com/originals/ad/fa/06/adfa06a2e4c804ce1ba06826c76c949e.pnghttps://wallpapercave.com/wp/wp5349389.jpg'};
+
 const Home = ({navigation}) => {
     return (
         <View style={styles.container}>
-            <SafeAreaView>
-            <ImageBackground source={{uri: 'https://i.pinimg.com/originals/ad/fa/06/adfa06a2e4c804ce1ba06826c76c949e.pnghttps://wallpapercave.com/wp/wp5349389.jpg',}} style={styles.image}/>
-            </SafeAreaView>
+            <ImageBackground source={image} resizeMode="cover" style={styles.image}>
             <Text style={styles.baseText}>
             <Text style= {styles.titleText}>
                 {titleText}
@@ -36,7 +36,8 @@ const Home = ({navigation}) => {
                 style={styles.mapbutton}>
                 <Text style = {styles.baseText}>Dropoff Locations</Text>
             </TouchableOpacity>
-            </View>
+            </ImageBackground>
+        </View>
 );
 };
 
@@ -87,7 +88,10 @@ const styles = StyleSheet.create({
         borderRadius: 100,
         backgroundColor: 'green',
     },
- 
+    image: {
+        flex: 1,
+        justifyContent: 'center',
+    }
     },
 )
 

@@ -1,5 +1,5 @@
-import React, { Linking } from 'react';
-import { StyleSheet, View, Text , SafeAreaView, ScrollView, StatusBar, TouchableOpacity} from 'react-native';
+import React from 'react';
+import { StyleSheet, View, Text , SafeAreaView, ScrollView, StatusBar, TouchableOpacity, Linking} from 'react-native';
 import { globalStyles } from '../styles/global';
 import {getpointscounter,incrementpointscounter,decreasepointsCounter} from '../assets/global_counter';
 import { get } from 'react-native/Libraries/TurboModule/TurboModuleRegistry';
@@ -16,9 +16,16 @@ export default function Points1() {
         <Text style= {styles2.header}>
             {"Total number of points:" + getpointscounter()}
         </Text>
-        <Text style={{color:'green'}} onPress={() => Linking.openURL('https://www.mcdonalds.com/us/en-us.html')}>
-            Get 15% off your next McDonalds order: 100pts
-        </Text>
+        <TouchableOpacity onPress={() => Linking.openURL('https://www.mcdonalds.com/us/en-us.html')} style={styles2.ads}>
+            <Text style={styles2.baseText}>
+             Get 15% off your next McDonalds order: 100pts
+            </Text>
+        </TouchableOpacity>
+        <TouchableOpacity onPress={() => Linking.openURL('https://www.mcdonalds.com/us/en-us.html')} style={styles2.ads}>
+            <Text style={styles2.baseText}>
+             Get 15% off your next McDonalds order: 100pts
+            </Text>
+        </TouchableOpacity>
         </ScrollView>
     </SafeAreaView>
   );
@@ -33,6 +40,7 @@ const styles2 = StyleSheet.create({
     },
     baseText: {
         fontFamily: 'Arial',
+        fontSize: 16,
     },
     titleText: {
         fontSize: 60,
@@ -51,5 +59,15 @@ const styles2 = StyleSheet.create({
         paddingVertical: 10,
         paddingHorizontal: 12,
     },
+    ads: {
+        marginTop: 20,
+        width: 375,
+        height: 50,
+        justifyContent: 'center',
+        alignItems: 'center',
+        padding: 10,
+        borderRadius: 100,
+        backgroundColor: 'green',
+    }
 
 })

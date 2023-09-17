@@ -1,5 +1,5 @@
-import React from 'react';
-import { StyleSheet, View, Text } from 'react-native';
+import React, { Linking } from 'react';
+import { StyleSheet, View, Text , SafeAreaView, ScrollView, StatusBar, TouchableOpacity} from 'react-native';
 import { globalStyles } from '../styles/global';
 import {getpointscounter,incrementpointscounter,decreasepointsCounter} from '../assets/global_counter';
 import { get } from 'react-native/Libraries/TurboModule/TurboModuleRegistry';
@@ -7,8 +7,8 @@ const titleText = "REEDEM YOUR POINTS";
 
 export default function Points1() {
   return (
-    <View style={styles2.container}>
-
+    <SafeAreaView style={styles2.container}>
+        <ScrollView style={styles2.scrollview}>
         <Text style= {styles2.titleText}>
             {titleText}
         </Text>
@@ -16,8 +16,11 @@ export default function Points1() {
         <Text style= {styles2.header}>
             {"Total number of points:" + getpointscounter()}
         </Text>
-
-    </View>
+        <Text style={{color:'green'}} onPress={() => Linking.openURL('https://www.mcdonalds.com/us/en-us.html')}>
+            Get 15% off your next McDonalds order: 100pts
+        </Text>
+        </ScrollView>
+    </SafeAreaView>
   );
 }
 

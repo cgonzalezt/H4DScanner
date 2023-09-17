@@ -33,6 +33,8 @@ const Home = ({navigation}) => {
                 style={styles.mapbutton}>
                 <Text style = {styles.baseText}>Dropoff Locations</Text>
             </TouchableOpacity>
+
+            <Image source={require=('../assets/leaf.png')} style= {styles.backgroundimage} />
         </View>
 );
 };

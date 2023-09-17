@@ -85,7 +85,7 @@ const styles = StyleSheet.create({
     borderRadius: 30,
     backgroundColor: 'tomato'
   },
-  points2button: {
+  p2button: {
     marginTop: 20,
         width: 200,
         height: 40,

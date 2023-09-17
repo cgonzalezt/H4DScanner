@@ -55,8 +55,8 @@ const styles = StyleSheet.create({
     },
     cambutton: {
         marginTop: 20,
-        width: 200,
-        height: 40,
+        width: 250,
+        height: 80,
         justifyContent: 'center',
         alignItems: 'center',
         padding: 10,
@@ -65,8 +65,8 @@ const styles = StyleSheet.create({
     },
     p1button: {
         marginTop: 20,
-        width: 200,
-        height: 40,
+        width: 250,
+        height: 80,
         justifyContent: 'center',
         alignItems: 'center',
         padding: 10,
@@ -75,8 +75,8 @@ const styles = StyleSheet.create({
     },
     mapbutton: {
         marginTop: 20,
-        width: 200,
-        height: 40,
+        width: 250,
+        height: 80,
         justifyContent: 'center',
         alignItems: 'center',
         padding: 10,

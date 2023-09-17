@@ -56,7 +56,7 @@ const styles2 = StyleSheet.create({
     ads: {
         marginTop: 20,
         width: 250,
-        height: 25,
+        height: 50,
         justifyContent: 'center',
         alignItems: 'center',
         padding: 10,

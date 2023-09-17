@@ -16,9 +16,9 @@ const App = () => {
         <NavigationContainer>
             <Stack.Navigator>
                 <Stack.Screen name = "Home" component={Home} options = {{title: 'Home'}} />
-                <Stack.Screen name = "Cam" component={Cam} options = {{title:'Camera Scanner', color: 'darkgreen'}}/>
-                <Stack.Screen name = "points1" component={points1} />
-                <Stack.Screen name = "points2" component={points2} />
+                <Stack.Screen name = "Cam" component={Cam} options = {{title:'Camera Scanner', color: 'darkgreen'}} />
+                <Stack.Screen name = "points1" component={points1} options = {{title:'User Points Page', cardstyle: {backgroundColor: '#ADF4CC'}}} />
+                <Stack.Screen name = "points2" component={points2}  options = {{title:'Rewards!', color: 'red'}} />
                 <Stack.Screen name = "returnmap" component={returnmap} options = {{title:'Return Locations'}} />
             </Stack.Navigator>
         </NavigationContainer>

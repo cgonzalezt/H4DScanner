@@ -53,14 +53,34 @@ const styles = StyleSheet.create({
     },
     cambutton: {
         marginTop: 20,
-        width: 70,
+        width: 200,
         height: 40,
         justifyContent: 'center',
         alignItems: 'center',
         padding: 10,
         borderRadius: 100,
         backgroundColor: 'green',
-    }
+    },
+    p1button: {
+        marginTop: 20,
+        width: 200,
+        height: 40,
+        justifyContent: 'center',
+        alignItems: 'center',
+        padding: 10,
+        borderRadius: 100,
+        backgroundColor: 'green',
+    },
+    mapbutton: {
+        marginTop: 20,
+        width: 200,
+        height: 40,
+        justifyContent: 'center',
+        alignItems: 'center',
+        padding: 10,
+        borderRadius: 100,
+        backgroundColor: 'green',
+    },
     },
 )
 

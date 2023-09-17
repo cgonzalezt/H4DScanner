@@ -34,7 +34,7 @@ const Home = ({navigation}) => {
                 <Text style = {styles.baseText}>Dropoff Locations</Text>
             </TouchableOpacity>
 
-            <Image source={require=('../assets/leaf.png')} />
+            <Image source={require=('./../assets/leaf.png')} />
         </View>
 );
 };

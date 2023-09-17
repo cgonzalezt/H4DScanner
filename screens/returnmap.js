@@ -19,22 +19,15 @@ export default function ReturnMap() {
         }}
       />
 
-      <Image
-        source= {{
-          width : 30,
-          height : 30,
-          uri: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Google_Maps_pin.svg/274px-Google_Maps_pin.svg.png'
-        }}
-      />
-
-
-      {/* <Button 
-        color = "blue"
-        title = "Click Me" 
-        onPress = {()=> console.log("button tapped!") }
-      /> */}
-
-      
+    <TouchableOpacity onPress = {() => console.log("icon pressed!")}>
+        <Image //Icon
+          source= {{
+            width : 30,
+            height : 30,
+            uri: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Google_Maps_pin.svg/274px-Google_Maps_pin.svg.png'
+          }}
+        />
+    </TouchableOpacity>
 
     </View>
   );

@@ -30,13 +30,13 @@ const Home = ({navigation}) => {
             <Button
                 onPress={() => navigation.navigate('points1', {name: 'points1'})}
                 title = "Go to points and discounts"
-                color = "grey"
+                color = "black"
             />
 
             <Button
                 onPress={() => navigation.navigate('returnmap', {name: 'returnmap'})}
                 title = "Dont Know where to return?"
-                color = "grey"
+                color = "black"
             />
 
         </View>
@@ -47,7 +47,7 @@ const Home = ({navigation}) => {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: 'lightgreen',
+        backgroundColor: 'limegreen',
         alignItems: 'center',
         justifyContent: 'center',
     },

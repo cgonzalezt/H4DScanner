@@ -9,7 +9,7 @@ import { NavigationContainer } from '@react-navigation/native';
 const titleText = "WESAVER";
 
 const Home = ({navigation}) => {
-    render()  {
+    render() ; {
         return (
             <View style={styles.container}>
                 <Text style={styles.baseText}>

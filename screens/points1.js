@@ -27,7 +27,7 @@ export default function Points1() {
 const styles2 = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: 'lightgreen',
+        backgroundColor: '#05C597',
         alignItems: 'center',
         justifyContent: 'center',
     },
@@ -37,7 +37,7 @@ const styles2 = StyleSheet.create({
     titleText: {
         fontSize: 60,
         fontWeight: 'bold',
-        color: 'darkgreen',
+        color: '#01FD70',
     },
     header: {
         fontSize: 30,

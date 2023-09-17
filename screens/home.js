@@ -5,6 +5,16 @@ import Cam from '../screens/camera';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { NavigationContainer } from '@react-navigation/native';
 
+const FlexDirectionBasics = () => {
+    const [flexDirection, setflexDirection] = useState('column');
+
+    return (
+        <PreviewLayout>
+            <View style={[styles.box, {backgroundColor: 'lawngreen'}]}/>
+        </PreviewLayout>
+
+    );
+};
 
 const Home = ({navigation}) => {
     return (
@@ -15,31 +25,43 @@ const Home = ({navigation}) => {
             <Button 
                 onPress={() => navigation.navigate('Cam', {name: 'Cam'})}
                 title = "Go to Camera"
-                color = "#841584"
+                color = "black"
             />
             <Button
                 onPress={() => navigation.navigate('points1', {name: 'points1'})}
-                title = "Go to points"
-                color = "grey"
+                title = "Go to points and discounts"
+                color = "black"
             />
 
             <Button
                 onPress={() => navigation.navigate('returnmap', {name: 'returnmap'})}
                 title = "Dont Know where to return?"
-                color = "grey"
+                color = "black"
             />
 
         </View>
     );
-}
+};
+
 
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: 'lightcyan',
+        backgroundColor: 'limegreen',
         alignItems: 'center',
         justifyContent: 'center',
-    }
+    },
+    buttonContainer: {
+        margin: 20,
+    },
+    box: {
+        width: 250,
+        height: 50,
+    },
+    row:{
+        flexDirection: 'row',
+        flexWrap: 'wrap',
+    },
 })
 
 export default Home;

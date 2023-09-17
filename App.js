@@ -19,7 +19,7 @@ const App = () => {
                 <Stack.Screen name = "Cam" component={Cam} options = {{title:'Camera Scanner', color: 'darkgreen'}}/>
                 <Stack.Screen name = "points1" component={points1} />
                 <Stack.Screen name = "points2" component={points2} />
-                <Stack.Screen name = "returnmap" component={returnmap} options = {{title:'Return Location'}} />
+                <Stack.Screen name = "returnmap" component={returnmap} options = {{title:'Return Locations'}} />
             </Stack.Navigator>
         </NavigationContainer>
     );

@@ -17,17 +17,20 @@ const Home = ({navigation}) => {
                 onPress={() => navigation.navigate('Cam', {name: 'Cam'})}
                 title = "Go to Camera"
                 color = "black"
+                fontSize = '40'
             />
             <Button
                 onPress={() => navigation.navigate('points1', {name: 'points1'})}
                 title = "Go to points and discounts"
                 color = "black"
+                fontSize = '40'
             />
 
             <Button
                 onPress={() => navigation.navigate('returnmap', {name: 'returnmap'})}
                 title = "Dont Know where to return?"
                 color = "black"
+                fontSize = '40'
             />
 
         </View>
@@ -39,7 +42,7 @@ const Home = ({navigation}) => {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: 'limegreen',
+        backgroundColor: 'mediumaquamarine',
         alignItems: 'center',
         justifyContent: 'center',
     },
@@ -47,7 +50,7 @@ const styles = StyleSheet.create({
         fontFamily: 'Arial',
     },
     titleText: {
-        fontSize: 50,
+        fontSize: 80,
         fontWeight: 'bold',
         paddingVertical: 20,
     },

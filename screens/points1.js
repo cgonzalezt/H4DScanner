@@ -23,7 +23,17 @@ export default function Points1() {
         </TouchableOpacity>
         <TouchableOpacity onPress={() => Linking.openURL('https://www.mcdonalds.com/us/en-us.html')} style={styles2.ads}>
             <Text style={styles2.baseText}>
-             Get 15% off your next McDonalds order: 100pts
+             Get 10% off your next P.F. Changs order: 125pts
+            </Text>
+        </TouchableOpacity>
+        <TouchableOpacity onPress={() => Linking.openURL('https://www.mcdonalds.com/us/en-us.html')} style={styles2.ads}>
+            <Text style={styles2.baseText}>
+             Get 25% off your next Buffalo Wild Wings order: 175pts
+            </Text>
+        </TouchableOpacity>
+        <TouchableOpacity onPress={() => Linking.openURL('https://www.mcdonalds.com/us/en-us.html')} style={styles2.ads}>
+            <Text style={styles2.baseText}>
+             Get 20% off your next Chipotle order: 150pts
             </Text>
         </TouchableOpacity>
         </ScrollView>
@@ -41,6 +51,7 @@ const styles2 = StyleSheet.create({
     baseText: {
         fontFamily: 'Arial',
         fontSize: 16,
+        flexWrap: 'wrap',
     },
     titleText: {
         fontSize: 60,

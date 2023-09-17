@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { StyleSheet, View, Text, Button } from 'react-native';
+import {StyleSheet, View, Text, Button } from 'react-native';
 import { globalStyles } from '../styles/global';
 import Cam from '../screens/camera';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
@@ -33,8 +33,6 @@ const Home = ({navigation}) => {
         </View>
 );
 };
-
-
 
 const styles = StyleSheet.create({
     container: {

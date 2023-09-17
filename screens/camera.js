@@ -56,7 +56,7 @@ const Camera =({navigation, route}) => {
           style={{ height: 400, width: 400 }} />
       </View>
       <Text style={styles.maintext}>{text}</Text>
-      {scanned && {$boxcounter = $boxcounter + 1} &&<TouchableOpacity onPress={() => navigation.navigate('points2', {name: 'points2'})}
+      {scanned &&<TouchableOpacity onPress={() => navigation.navigate('points2', {name: 'points2'})}
                 style={styles.p2button}>
                 <Text>Scanned! Continue</Text>
             </TouchableOpacity>

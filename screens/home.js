@@ -5,16 +5,6 @@ import Cam from '../screens/camera';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { NavigationContainer } from '@react-navigation/native';
 
-const FlexDirectionBasics = () => {
-    const [flexDirection, setflexDirection] = useState('column');
-
-    return (
-        <PreviewLayout>
-            <View style={[styles.box, {backgroundColor: 'lawngreen'}]}/>
-        </PreviewLayout>
-
-    );
-};
 
 const titleText = useState("WESAVER");
 
@@ -65,14 +55,7 @@ const styles = StyleSheet.create({
     buttonContainer: {
         margin: 20,
     },
-    box: {
-        width: 250,
-        height: 50,
-    },
-    row:{
-        flexDirection: 'row',
-        flexWrap: 'wrap',
-    },
+
 })
 
 export default Home;

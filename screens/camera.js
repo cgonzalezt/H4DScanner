@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Text, View, StyleSheet, TouchableOpacity} from 'react-native';
 import { BarCodeScanner } from 'expo-barcode-scanner';
-import {boxcounter} from './App.js';
-const greeting = `You have ${boxcounter} boxes left`;
 
 const Camera =({navigation, route}) => {
   const [hasPermission, setHasPermission] = useState(null);

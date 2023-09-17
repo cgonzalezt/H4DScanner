@@ -1,6 +1,6 @@
 import React from "react";
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, Image, SafeAreaView, Touchable, TouchableOpacity, TouchableHighlight, TouchableWithoutFeedback, Button} from 'react-native';
+import { Alert, Linking, StyleSheet, Text, View, Image, SafeAreaView, Touchable, TouchableOpacity, TouchableHighlight, TouchableWithoutFeedback, Button} from 'react-native';
 
 export default function ReturnMap() {
   return (
@@ -10,25 +10,121 @@ export default function ReturnMap() {
 
     <TouchableOpacity 
     style={[styles.overlaytouch,{top:120,left:120}]}
-    onPress={() => { console.log('Pin 1 pressed'); }}>
+    onPress={() => { Alert.alert("Open location in Google Maps?", 
+                     "", 
+                      [
+                        {
+                          text: "Yes",
+                          onPress: () => {
+                              // Create a deep link URL for the location to open in Google Maps
+                              const googleMapsUrl = 'https://maps.app.goo.gl/hg7NwtMNmSoM6xet9';
+                              
+                              // Use Linking to open the Google Maps app or a browser if the app is not installed
+                              Linking.canOpenURL(googleMapsUrl).then(supported => {
+                                  if (supported) {
+                                      Linking.openURL(googleMapsUrl);
+                                  } else {
+                                      console.log("Google Maps is not installed.");
+                                      // Handle the case where Google Maps is not installed, e.g., open in a browser
+                                      // Linking.openURL('https://www.google.com/maps?q=Your+Location');
+                                  }
+                              });
+                          }
+                        },
+
+                        {text: "No", onPress: () => console.log("No")},
+                      ] 
+          )}}>
     <Image source={require('./../assets/pin.png')} style={styles.overlayImage} />
     </TouchableOpacity>
 
     <TouchableOpacity 
     style={[styles.overlaytouch,{top:120,left:120}]}
-    onPress={() => { console.log('Pin 2 pressed'); }}> 
+    onPress={() => { Alert.alert("Open location in Google Maps?", 
+                     "", 
+                      [
+                        {
+                          text: "Yes",
+                          onPress: () => {
+                              // Create a deep link URL for the location to open in Google Maps
+                              const googleMapsUrl = 'https://maps.app.goo.gl/u1mDka9K3jmWYbTF6';
+                              
+                              // Use Linking to open the Google Maps app or a browser if the app is not installed
+                              Linking.canOpenURL(googleMapsUrl).then(supported => {
+                                  if (supported) {
+                                      Linking.openURL(googleMapsUrl);
+                                  } else {
+                                      console.log("Google Maps is not installed.");
+                                      // Handle the case where Google Maps is not installed, e.g., open in a browser
+                                      // Linking.openURL('https://www.google.com/maps?q=Your+Location');
+                                  }
+                              });
+                          }
+                        },
+
+                        {text: "No", onPress: () => console.log("No")},
+                      ] 
+          )}}>
     <Image source={require('./../assets/pin.png')} style={styles.overlayImage2} />
     </TouchableOpacity>
 
-    <TouchableOpacity 
+    <TouchableOpacity
     style={[styles.overlaytouch,{top:120,left:120}]}
-    onPress={() => { console.log('Pin 3 pressed'); }}> 
+    onPress={() => { Alert.alert("Open location in Google Maps?", 
+                     "", 
+                      [
+                        {
+                          text: "Yes",
+                          onPress: () => {
+                              // Create a deep link URL for the location to open in Google Maps
+                              const googleMapsUrl = 'https://maps.app.goo.gl/xFdFk14ncTnvodBD9';
+                              
+                              // Use Linking to open the Google Maps app or a browser if the app is not installed
+                              Linking.canOpenURL(googleMapsUrl).then(supported => {
+                                  if (supported) {
+                                      Linking.openURL(googleMapsUrl);
+                                  } else {
+                                      console.log("Google Maps is not installed.");
+                                      // Handle the case where Google Maps is not installed, e.g., open in a browser
+                                      // Linking.openURL('https://www.google.com/maps?q=Your+Location');
+                                  }
+                              });
+                          }
+                        },
+
+                        {text: "No", onPress: () => console.log("No")},
+                      ] 
+          )}}>
     <Image source={require('./../assets/pin.png')} style={styles.overlayImage3} />
     </TouchableOpacity>
 
-    <TouchableOpacity 
+    <TouchableOpacity  
     style={[styles.overlaytouch,{top:120,left:120}]}
-    onPress={() => { console.log('Pin 4 pressed'); }}>
+    onPress={() => { Alert.alert("Open location in Google Maps?", 
+                     "", 
+                      [
+                        {
+                          text: "Yes",
+                          onPress: () => {
+                              // Create a deep link URL for the location to open in Google Maps
+                              const googleMapsUrl = 'https://maps.app.goo.gl/aP4Vj7m5AdwCrTkRA';
+                              
+                              // Use Linking to open the Google Maps app or a browser if the app is not installed
+                              Linking.canOpenURL(googleMapsUrl).then(supported => {
+                                  if (supported) {
+                                      Linking.openURL(googleMapsUrl);
+                                  } else {
+                                      console.log("Google Maps is not installed.");
+                                      // Handle the case where Google Maps is not installed, e.g., open in a browser
+                                      // Linking.openURL('https://www.google.com/maps?q=Your+Location');
+                                  }
+                              });
+                          }
+                        },
+
+                        {text: "No", onPress: () => console.log("No")},
+                      ] 
+          )}}>
     <Image source={require('./../assets/pin.png')} style={styles.overlayImage4} />
     </TouchableOpacity>
 
@@ -48,14 +144,15 @@ const styles = StyleSheet.create({
     resizeMode: 'cover',
     position: 'absolute',
   },
-overlaytouch:{
-  position:'absolute',
-  width:'25%',
-  height:'25%',
-  alignItems:'center',
-  justifyContent:'center',
 
-},
+  overlaytouch:{
+    position:'absolute',
+    width:'25%',
+    height:'25%',
+    alignItems:'center',
+    justifyContent:'center',
+
+  },
 
   overlayImage:{
     top: 320,

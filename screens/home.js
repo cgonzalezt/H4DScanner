@@ -14,6 +14,7 @@ const Home = ({navigation}) => {
         <View style={styles.container}>
             <Image source={require('./../assets/maybee.jpeg')} style={styles.backgroundimage} />
             <Text style={styles.baseText}>
+                <Image source={require('./../assets/pengu.png')} style={styles.image}/>
             <Text style= {styles.titleText}>
                 {titleText}
             </Text>

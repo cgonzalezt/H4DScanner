@@ -5,6 +5,18 @@ import Cam from '../screens/camera';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { NavigationContainer } from '@react-navigation/native';
 
+const FlexDirectionBasics = () => {
+    const [flexDirection, setflexDirection] = useState('column');
+
+    return (
+        <PreviewLayout
+        selectedValue={flexDirection}
+        setSelectedValue={setflexDirection}>
+            <View style={[styles.box, {backgroundColor: 'lawngreen'}]}/>
+        </PreviewLayout>
+
+    );
+};
 
 const Home = ({navigation}) => {
     return (
@@ -19,7 +31,7 @@ const Home = ({navigation}) => {
             />
             <Button
                 onPress={() => navigation.navigate('points1', {name: 'points1'})}
-                title = "Go to points"
+                title = "Go to points and discounts"
                 color = "grey"
             />
 
@@ -31,15 +43,29 @@ const Home = ({navigation}) => {
 
         </View>
     );
-}
+};
+
+const PreviewLayout = ({
+    children,
+    selectedValue,
+    setSelectedValue,
+})
 
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: 'lightcyan',
+        backgroundColor: 'lightgreen',
         alignItems: 'center',
         justifyContent: 'center',
-    }
+    },
+    box: {
+        width: 250,
+        height: 50,
+    },
+    row:{
+        flexDirection: 'row',
+        flexWrap: 'wrap',
+    },
 })
 
 export default Home;

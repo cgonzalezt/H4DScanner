@@ -1,9 +1,9 @@
 import React from 'react';
 import { StyleSheet, View, Text, TouchableOpacity } from 'react-native';
 import { globalStyles } from '../styles/global';
+import { getpointscounter } from '../assets/global_counter';
 
 const titleText = "CONGRATULATIONS"
-const points = 50;
 export default function Points2({navigation}) {
   return (
     <View style={styles2.container}>
@@ -13,7 +13,7 @@ export default function Points2({navigation}) {
         </Text>
 
         <Text style= {styles2.header}>
-            {"You just gained " + points + " points!"}
+            {"You just gained " + 25 + " points!"}
         </Text>
         <TouchableOpacity
                 onPress={() => navigation.navigate('points1', {name: 'points1'})}

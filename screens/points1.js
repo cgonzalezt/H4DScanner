@@ -290,9 +290,10 @@ const styles2 = StyleSheet.create({
         justifyContent: 'center',
     },
     baseText: {
-        fontFamily: 'Arial',
-        fontSize: 16,
+        fontFamily: 'Comic sans',
+        fontSize: 14.5,
         flexWrap: 'wrap',
+        color:'white',
         fontWeight: 'bold',
     },
     titleText: {

@@ -12,7 +12,7 @@ const Home = ({navigation}) => {
     return (
         <View style={styles.container}>
 
-            <ImageBackground source={require=('./../assets/leaf.png')} style={styles.image}/>
+            <ImageBackground source={{uri: 'https://i.pinimg.com/originals/ad/fa/06/adfa06a2e4c804ce1ba06826c76c949e.png',}} style={styles.image}/>
             <Text style={styles.baseText}>
             <Text style= {styles.titleText}>
                 {titleText}

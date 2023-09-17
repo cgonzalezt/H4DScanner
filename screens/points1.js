@@ -40,7 +40,9 @@ const styles2 = StyleSheet.create({
     },
     baseText: {
         fontFamily: 'Arial',
-        fontSize: 16,
+        fontSize: 15.5,
+        color: 'black',
+        fontWeight: 'bold',
     },
     titleText: {
         fontSize: 60,

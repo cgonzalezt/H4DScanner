@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Text, View, StyleSheet, TouchableOpacity} from 'react-native';
 import { BarCodeScanner } from 'expo-barcode-scanner';
-import { incrementboxCounter,decreaseboxCounter,getboxcounter,} from '../assets/global_counter';
+import { incrementboxCounter,decreaseboxCounter,getboxcounter, incrementpointscounter,} from '../assets/global_counter';
 
 const Camera =({navigation, route}) => {
   const [hasPermission, setHasPermission] = useState(null);
@@ -22,6 +22,7 @@ const Camera =({navigation, route}) => {
   // What happens when we scan the bar code
   const handleBarCodeScanned = ({ type, data }) => {
     incrementboxCounter();
+    incrementpointscounter();
     setScanned(true);
   };
 

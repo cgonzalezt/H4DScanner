@@ -3,7 +3,7 @@ import { StyleSheet, View, Text , SafeAreaView, ScrollView, StatusBar, Touchable
 import { globalStyles } from '../styles/global';
 import {getpointscounter,incrementpointscounter,decreasepointsCounter} from '../assets/global_counter';
 import { get } from 'react-native/Libraries/TurboModule/TurboModuleRegistry';
-const titleText = "REEDEM YOUR POINTS";
+const titleText = "REDEEM YOUR POINTS";
 
 export default function Points1() {
     if (getpointscounter() < 75){

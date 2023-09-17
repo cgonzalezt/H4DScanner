@@ -21,7 +21,7 @@ height:300,
 backgroundImage:{
   width:'100%',
   height:'100%',
-  resizemode: 'cover',
+  resizeMode: 'cover',
   position: 'absolute',
 },
 
@@ -31,7 +31,7 @@ overlayImage:{
   left:10,
   width:'10%',
   height:'10%',
-  resizemode: 'cover'
+  resizeMode: 'contain'
 },
 
 });

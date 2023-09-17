@@ -19,19 +19,19 @@ const Home = ({navigation}) => {
             <TouchableOpacity 
                 onPress={() => navigation.navigate('Cam', {name: 'Cam'})}
                 style = {styles.cambutton}>
-                <Text>Scan Container</Text>
+                <Text style = {styles.baseText}>Scan Container</Text>
             </TouchableOpacity>
 
             <TouchableOpacity
                 onPress={() => navigation.navigate('points1', {name: 'points1'})}
                 style={styles.p1button}>
-                <Text>Check/Redeem your points!</Text>
+                <Text style = {styles.baseText}>Check/Redeem your points!</Text>
             </TouchableOpacity>
 
             <TouchableOpacity
                 onPress={() => navigation.navigate('returnmap', {name: 'returnmap'})}
                 style={styles.mapbutton}>
-                <Text>Dropoff locator</Text>
+                <Text style = {styles.baseText}>Dropoff locator</Text>
             </TouchableOpacity>
         </View>
 );
@@ -40,16 +40,18 @@ const Home = ({navigation}) => {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: 'mediumaquamarine',
+        backgroundColor: 'darkgreen',
         alignItems: 'center',
         justifyContent: 'center',
     },
     baseText: {
         fontFamily: 'Arial',
+        color: 'white',
     },
     titleText: {
         fontSize: 60,
         fontWeight: 'bold',
+        color: 'white',
     },
     cambutton: {
         marginTop: 20,

@@ -9,3 +9,27 @@ export default function Points2() {
     </View>
   );
 }
+
+const styles2 = StyleSheet.create({
+    container: {
+        flex: 1,
+        backgroundColor: 'mediumaquamarine',
+        alignItems: 'center',
+        justifyContent: 'center',
+    },
+    baseText: {
+        fontFamily: 'Arial',
+    },
+    titleText: {
+        fontSize: 60,
+        fontWeight: 'bold',
+    },
+    ButtonContainer: {
+        elevation: 8,
+        backgroundColor: 'green',
+        borderRadius: 10,
+        paddingVertical: 10,
+        paddingHorizontal: 12,
+    },
+
+})

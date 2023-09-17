@@ -6,12 +6,15 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { NavigationContainer } from '@react-navigation/native';
 
 
+const titleText = "WESAVER";
 
 const Home = ({navigation}) => {
     return (
         <View style={styles.container}>
-            <Text style= {styles.titleText}>
-                WESAVER
+            <Text style={styles.baseText}>
+            <Text style= {globalStyles.titleText}>
+                {titleText}
+            </Text>
             </Text>
             <Button 
                 onPress={() => navigation.navigate('Cam', {name: 'Cam'})}
@@ -47,7 +50,6 @@ const styles = StyleSheet.create({
     titleText: {
         fontSize: 50,
         fontWeight: 'bold',
-        paddingVertical: 20,
     },
     buttonContainer: {
         margin: 20,

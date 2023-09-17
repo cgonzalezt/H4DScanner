@@ -16,11 +16,15 @@ const FlexDirectionBasics = () => {
     );
 };
 
+const titleText = useState("WESAVER");
+
 const Home = ({navigation}) => {
     return (
         <View style={styles.container}>
+            <Text style={styles.baseText}>
             <Text style= {globalStyles.titleText}>
-                Welcome!
+                {titleText}
+            </Text>
             </Text>
             <Button 
                 onPress={() => navigation.navigate('Cam', {name: 'Cam'})}
@@ -50,6 +54,13 @@ const styles = StyleSheet.create({
         backgroundColor: 'limegreen',
         alignItems: 'center',
         justifyContent: 'center',
+    },
+    baseText: {
+        fontFamily: 'Cochin',
+    },
+    titleText: {
+        fontSize: 30,
+        fontWeight: 'bold',
     },
     buttonContainer: {
         margin: 20,

@@ -14,7 +14,7 @@ const Home = ({navigation}) => {
     return (
         <View style={styles.container}>
 
-            <Image source={require('./../assets/plant_flic.jpeg')} style={styles.backgroundimage} />
+            <Image source={require('./../assets/pasto.jpeg')} style={styles.backgroundimage} />
             <Text style={styles.baseText}>
             <Text style= {styles.titleText}>
                 {titleText}
@@ -57,7 +57,7 @@ const styles = StyleSheet.create({
     baseText: {
         fontSize:32,
         fontWeight: 'bold',
-        color: '#FF0017',
+        color: 'red',
         textShadowColor: 'black',
         textShadowRadius: 3,
         textShadowOffset: {
@@ -68,7 +68,7 @@ const styles = StyleSheet.create({
     titleText: {
         fontSize: 60,
         fontWeight: 'bold',
-        color: '#FF0017',
+        color: 'red',
         textShadowColor: 'black',
         textShadowRadius: 3,
         textShadowOffset: {

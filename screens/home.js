@@ -120,7 +120,7 @@ const styles = StyleSheet.create(
     },
     logo:{
         width:'.05',
-        height:'5',
+        height:'.05',
         resizeMode: 'contain'
     }
     },

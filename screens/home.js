@@ -13,8 +13,8 @@ const Home = ({navigation}) => {
     return (
         <View style={styles.container}>
             <Image source={require('./../assets/maybee.jpeg')} style={styles.backgroundimage} />
+            <Image source={require('./../assets/pengu.png')} style={styles.logo}/>
             <Text style={styles.baseText}>
-                <Image source={require('./../assets/pengu.png')} style={styles.logo}/>
             <Text style= {styles.titleText}>
                 {titleText}
             </Text>
@@ -119,8 +119,9 @@ const styles = StyleSheet.create(
         justifyContent: 'center',
     },
     logo:{
-        width:'.05',
-        height:'5',
+        top: .001,
+        width:'25%',
+        height:'25%',
         resizeMode: 'contain'
     }
     },

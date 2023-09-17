@@ -45,7 +45,7 @@ const Camera =({navigation, route}) => {
   // Return the View
   return (
     <View style={styles.container}>
-      <Image source={require('./../assets/please_god.jpeg')} style={styles.backgroundimage} />
+      <Image source={require('./../assets/windmills.jpeg')} style={styles.backgroundimage} />
       <View style={styles.contentContainer}>
        <Text style={styles.boxCounterText}>{'Box(es): ' + getboxcounter() }</Text>
       <View style={styles.barcodebox}>

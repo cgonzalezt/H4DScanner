@@ -62,7 +62,6 @@ const styles = StyleSheet.create({
         backgroundColor: 'green',
     }
     },
-
-})
+)
 
 export default Home;

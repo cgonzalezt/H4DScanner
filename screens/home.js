@@ -46,10 +46,10 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
     },
     baseText: {
-        fontFamily: 'Cochin',
+        fontFamily: 'Arial',
     },
     titleText: {
-        fontSize: 30,
+        fontSize: 70,
         fontWeight: 'bold',
     },
     buttonContainer: {

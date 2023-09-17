@@ -35,6 +35,7 @@ const styles2 = StyleSheet.create({
     },
     baseText: {
         fontFamily: 'Arial',
+        fontSize: 15,
     },
     titleText: {
         fontSize: 60,

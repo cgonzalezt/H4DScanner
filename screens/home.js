@@ -25,13 +25,13 @@ const Home = ({navigation}) => {
             <TouchableOpacity
                 onPress={() => navigation.navigate('points1', {name: 'points1'})}
                 style={styles.p1button}>
-                <Text style = {styles.baseText}>Check/Redeem your points!</Text>
+                <Text style = {styles.baseText}>Your Points</Text>
             </TouchableOpacity>
 
             <TouchableOpacity
                 onPress={() => navigation.navigate('returnmap', {name: 'returnmap'})}
                 style={styles.mapbutton}>
-                <Text style = {styles.baseText}>Dropoff locator</Text>
+                <Text style = {styles.baseText}>Dropoff Locations</Text>
             </TouchableOpacity>
         </View>
 );
@@ -47,6 +47,7 @@ const styles = StyleSheet.create({
     baseText: {
         fontFamily: 'Arial',
         color: 'white',
+        fontSize: 25,
     },
     titleText: {
         fontSize: 60,
@@ -55,7 +56,7 @@ const styles = StyleSheet.create({
     },
     cambutton: {
         marginTop: 20,
-        width: 250,
+        width: 300,
         height: 80,
         justifyContent: 'center',
         alignItems: 'center',
@@ -65,7 +66,7 @@ const styles = StyleSheet.create({
     },
     p1button: {
         marginTop: 20,
-        width: 250,
+        width: 300,
         height: 80,
         justifyContent: 'center',
         alignItems: 'center',
@@ -75,7 +76,7 @@ const styles = StyleSheet.create({
     },
     mapbutton: {
         marginTop: 20,
-        width: 250,
+        width: 300,
         height: 80,
         justifyContent: 'center',
         alignItems: 'center',

@@ -71,16 +71,21 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   boxCounterText:{
+    fontSize:20,
     marginTop: 20,
-    width: 100,
-    height: 30,
+    width: 120,
+    height: 35,
     justifyContent: 'center',
     alignItems: 'center',
     padding: 10,
     borderRadius: 20,
     fontWeight: 'bold',
     backgroundColor: '#945532',
-
+    textShadowRadius: 3,
+        textShadowOffset: {
+            width: 2,
+            height: 2,
+        }
   },
   contentContainer:{
     flex:1,
@@ -88,6 +93,7 @@ const styles = StyleSheet.create({
     justifyContent:'center',
     fontWeight: 'bold',
     borderColorb:'black',
+    
   },
   backgroundimage:{
     position:'absolute',

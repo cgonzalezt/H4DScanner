@@ -55,10 +55,15 @@ const styles = StyleSheet.create({
         position: 'absolute',
       },
     baseText: {
-        fontFamily: 'Arial',
-        color: 'white',
-        fontSize: 33,
+        fontSize:32,
         fontWeight: 'bold',
+        color: '#FF0017',
+        textShadowColor: 'black',
+        textShadowRadius: 3,
+        textShadowOffset: {
+            width: 2,
+            height: 2,
+        }
     },
     titleText: {
         fontSize: 60,

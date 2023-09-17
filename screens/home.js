@@ -60,7 +60,6 @@ const styles = StyleSheet.create(
         fontSize:32,
         fontWeight: 'bold',
         color: '#4AE188',
-        textShadowColor: 'dark green',
         textShadowRadius: 3,
         textShadowOffset: {
             width: 2,

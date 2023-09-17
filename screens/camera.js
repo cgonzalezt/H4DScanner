@@ -73,7 +73,7 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   saveCounterText:{
-    fontSize:20,
+    fontSize:22,
     marginTop: 20,
     width: 250,
     height: 40,
@@ -82,16 +82,10 @@ const styles = StyleSheet.create({
     padding: 10,
     borderRadius: 20,
     fontWeight: 'bold',
-    backgroundColor: '#945532',
-    textShadowRadius: 3,
-        textShadowOffset: {
-            width: 2,
-            height: 2,
-        },
     bottom : 80,
   },
   boxCounterText:{
-    fontSize:20,
+    fontSize:22,
     marginTop: 20,
     width: 120,
     height: 40,
@@ -100,12 +94,6 @@ const styles = StyleSheet.create({
     padding: 10,
     borderRadius: 20,
     fontWeight: 'bold',
-    backgroundColor: '#945532',
-    textShadowRadius: 3,
-        textShadowOffset: {
-            width: 2,
-            height: 2,
-        },
     bottom : 20
   },
   contentContainer:{

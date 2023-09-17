@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {StyleSheet, View, Text, TouchableOpacity, ImageBackground, SafeAreaView} from 'react-native';
+import {StyleSheet, View, Text, TouchableOpacity, Image, ImageBackground, SafeAreaView} from 'react-native';
 import { globalStyles } from '../styles/global';
 import Cam from '../screens/camera';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
@@ -13,7 +13,8 @@ const image = {uri: 'https://i.pinimg.com/originals/ad/fa/06/adfa06a2e4c804ce1ba
 const Home = ({navigation}) => {
     return (
         <View style={styles.container}>
-            <ImageBackground source={image} resizeMode="cover" style={styles.image}>
+
+            <Image source={require('./../assets/plant_flic.jpeg')} style={styles.backgroundimage} />
             <Text style={styles.baseText}>
             <Text style= {styles.titleText}>
                 {titleText}
@@ -36,7 +37,6 @@ const Home = ({navigation}) => {
                 style={styles.mapbutton}>
                 <Text style = {styles.baseText}>Dropoff Locations</Text>
             </TouchableOpacity>
-            </ImageBackground>
         </View>
 );
 };
@@ -44,10 +44,16 @@ const Home = ({navigation}) => {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: 'darkgreen',
+        backgroundColor: 'black',
         alignItems: 'center',
         justifyContent: 'center',
     },
+    backgroundimage:{
+        width:'100%',
+        height:'100%',
+        resizeMode: 'cover',
+        position: 'absolute',
+      },
     baseText: {
         fontFamily: 'Arial',
         color: 'white',
@@ -56,7 +62,7 @@ const styles = StyleSheet.create({
     titleText: {
         fontSize: 60,
         fontWeight: 'bold',
-        color: 'white',
+        color: '#FF0017',
     },
     cambutton: {
         marginTop: 20,

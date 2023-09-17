@@ -8,7 +8,7 @@ import { NavigationContainer } from '@react-navigation/native';
 
 const Home = ({navigation}) => {
     return (
-        <View style={globalStyles.container}>
+        <View style={styles.container}>
             <Text style= {globalStyles.titleText}>
                 Welcome!
             </Text>
@@ -32,5 +32,14 @@ const Home = ({navigation}) => {
         </View>
     );
 }
+
+const styles = StyleSheet.create({
+    container: {
+        flex: 1,
+        backgroundColor: 'lightcyan',
+        alignItems: 'center',
+        justifyContent: 'center',
+    }
+})
 
 export default Home;

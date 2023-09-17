@@ -12,7 +12,6 @@ const titleText = "WESAVER";
 const Home = ({navigation}) => {
     return (
         <View style={styles.container}>
-            <Image source={require('./../assets/pengu.png')} style={styles.Image}/>
             <Image source={require('./../assets/pasto.jpeg')} style={styles.backgroundimage} />
             <Text style={styles.baseText}>
             <Text style= {styles.titleText}>

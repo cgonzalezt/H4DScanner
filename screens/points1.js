@@ -102,8 +102,8 @@ const styles2 = StyleSheet.create({
         justifyContent: 'center',
         alignItems: 'center',
         padding: 10,
-        borderRadius: 100,
-        backgroundColor: 'green',
+        borderRadius: 10,
+        backgroundColor: 'black',
     }
 
 })

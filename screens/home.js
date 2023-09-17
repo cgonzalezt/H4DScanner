@@ -12,7 +12,7 @@ const titleText = "WESAVER";
 const Home = ({navigation}) => {
     return (
         <View style={styles.container}>
-            <Image source={require('./../assets/pasto.jpeg')} style={styles.backgroundimage} />
+            <Image source={require('./../assets/maybee.jpeg')} style={styles.backgroundimage} />
             <Text style={styles.baseText}>
             <Text style= {styles.titleText}>
                 {titleText}
@@ -55,8 +55,8 @@ const styles = StyleSheet.create({
     baseText: {
         fontSize:32,
         fontWeight: 'bold',
-        color: 'red',
-        textShadowColor: 'black',
+        color: '#4AE188',
+        textShadowColor: 'dark green',
         textShadowRadius: 3,
         textShadowOffset: {
             width: 2,
@@ -66,7 +66,7 @@ const styles = StyleSheet.create({
     titleText: {
         fontSize: 60,
         fontWeight: 'bold',
-        color: 'red',
+        color: '#4AE188',
         textShadowColor: 'black',
         textShadowRadius: 3,
         textShadowOffset: {
@@ -82,7 +82,7 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         padding: 10,
         borderRadius: 100,
-        borderColor: 'black',
+        borderColor: '#119748',
         borderStyle: 'solid',
         borderWidth: 6,
     },
@@ -94,7 +94,7 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         padding: 10,
         borderRadius: 100,
-        borderColor: 'black',
+        borderColor: '#119748',
         borderStyle: 'solid',
         borderWidth: 6,
     },
@@ -106,7 +106,7 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         padding: 10,
         borderRadius: 100,
-        borderColor: 'black',
+        borderColor: '#119748',
         borderStyle: 'solid',
         borderWidth: 6,
     },
